@@ -1,0 +1,361 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Manajemen Stok</h1>
+    <p class="page-subtitle">Kelola produk, harga, dan inventori barang</p>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadModal">
+      <i class="fas fa-upload"></i> Import Excel
+    </button>
+    <a href="/stok/download" class="btn btn-outline-secondary btn-sm">
+      <i class="fas fa-download"></i> Export
+    </a>
+    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambahModal">
+      <i class="fas fa-plus"></i> Tambah Barang
+    </button>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="row g-3 mb-4">
+  <div class="col-sm-3">
+    <div class="card stat-card stat-accent-blue">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-box"></i></div>
+        <div class="stat-label">Total Barang</div>
+        <div class="stat-value mt-1" style="font-size:1.4rem;">{{ barangs.length }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card stat-card stat-accent-green">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="stat-label">Stok Aman</div>
+        <div class="stat-value mt-1" style="font-size:1.4rem;">{{ barangs | selectattr('stock_level', 'equalto', 'high') | list | length }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card stat-card stat-accent-amber">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <div class="stat-label">Stok Terbatas</div>
+        <div class="stat-value mt-1" style="font-size:1.4rem;">{{ barangs | selectattr('stock_level', 'equalto', 'medium') | list | length }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card stat-card stat-accent-red">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-times-circle"></i></div>
+        <div class="stat-label">Stok Rendah</div>
+        <div class="stat-value mt-1" style="font-size:1.4rem;">{{ barangs | selectattr('stock_level', 'equalto', 'low') | list | length }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Table -->
+<div class="card">
+  <div class="card-header">
+    <h6 class="card-header-title"><i class="fas fa-boxes"></i> Daftar Barang</h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="datatablesSimple" class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Produk</th>
+            <th>SKU</th>
+            <th>Kategori</th>
+            <th>Stok</th>
+            <th>Harga Beli</th>
+            <th>Harga Jual</th>
+            <th>Margin</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for barang in barangs %}
+          <tr>
+            <td style="color:var(--text-3);font-size:.75rem;">{{ barang.id }}</td>
+            <td>
+              <div style="font-weight:500;">{{ barang.nama }}</div>
+              {% if barang.deskripsi %}
+              <div style="font-size:.72rem;color:var(--text-3);">{{ barang.deskripsi | truncate(45) }}</div>
+              {% endif %}
+            </td>
+            <td><code style="font-size:.75rem;color:var(--text-2);">{{ barang.SKU }}</code></td>
+            <td>
+              {% if barang.kategori_nama %}
+              <span class="badge bg-secondary">{{ barang.kategori_nama }}</span>
+              {% else %}<span style="color:var(--text-3);font-size:.75rem;">—</span>{% endif %}
+            </td>
+            <td>
+              <span class="badge {% if barang.stock_level == 'low' %}bg-danger{% elif barang.stock_level == 'medium' %}bg-warning{% else %}bg-success{% endif %}" style="font-family:'DM Mono',monospace;font-size:.73rem;">
+                {{ barang.jumlah_stok }}
+              </span>
+            </td>
+            <td style="font-size:.8rem;">Rp {{ barang.harga_beli | replace(',', '.') }}</td>
+            <td style="font-size:.8rem;font-weight:500;">Rp {{ barang.harga_jual | replace(',', '.') }}</td>
+            <td>
+              {% if barang.profit_margin > 0 %}
+              <span style="color:var(--success);font-size:.8rem;">+Rp {{ barang.profit_margin | replace(',', '.') }}</span>
+              {% else %}<span style="color:var(--text-3);">—</span>{% endif %}
+            </td>
+            <td>
+              {% if barang.stock_level == 'low' %}<span class="badge bg-danger">Stok Rendah</span>
+              {% elif barang.stock_level == 'medium' %}<span class="badge bg-warning">Terbatas</span>
+              {% else %}<span class="badge bg-success">Aman</span>{% endif %}
+            </td>
+            <td>
+              <div class="d-flex gap-1">
+                <button class="btn btn-outline-secondary btn-sm btn-edit"
+                  data-bs-toggle="modal" data-bs-target="#editModal"
+                  data-id="{{ barang.id }}"
+                  data-nama="{{ barang.nama }}"
+                  data-deskripsi="{{ barang.deskripsi }}"
+                  data-sku="{{ barang.SKU }}"
+                  data-jumlah_stok="{{ barang.jumlah_stok }}"
+                  data-harga_beli="{{ barang.harga_beli }}"
+                  data-harga_jual="{{ barang.harga_jual }}"
+                  data-kategori_id="{{ barang.kategori_id }}"
+                  title="Edit">
+                  <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="btn btn-outline-danger btn-sm delete-btn"
+                  data-id="{{ barang.id }}" data-nama="{{ barang.nama }}" title="Hapus">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Upload -->
+<div class="modal fade" id="uploadModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="fas fa-upload" style="color:var(--accent)"></i> Import Data Barang</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form id="uploadForm" enctype="multipart/form-data" method="post" action="/stok/upload">
+        <div class="modal-body">
+          <div class="alert alert-info">
+            <i class="fas fa-info-circle flex-shrink-0"></i>
+            <div>
+              <div style="font-weight:500;margin-bottom:.35rem;">Petunjuk Upload</div>
+              <ul style="margin:0;padding-left:1.25rem;font-size:.8rem;">
+                <li>File berformat Excel (.xlsx atau .xls)</li>
+                <li>Download template untuk format yang benar</li>
+                <li>SKU harus unik — duplikat akan dilewati</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <label class="form-label">Pilih file Excel</label>
+            <input type="file" class="form-control" id="fileUpload" name="fileUpload" accept=".xls,.xlsx" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Upload</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Tambah -->
+<div class="modal fade" id="tambahModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="fas fa-plus" style="color:var(--success)"></i> Tambah Barang Baru</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="POST" action="/stok/tambah">
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nama Barang <span style="color:var(--danger)">*</span></label>
+              <input type="text" class="form-control" name="nama" required placeholder="Nama produk">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">SKU <span style="color:var(--danger)">*</span></label>
+              <input type="text" class="form-control" name="SKU" required placeholder="Kode unik produk">
+              <div class="form-text">SKU harus unik di seluruh sistem</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Jumlah Stok <span style="color:var(--danger)">*</span></label>
+              <input type="number" class="form-control" name="jumlah_stok" min="0" required placeholder="0">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Harga Beli</label>
+              <div class="input-group">
+                <span class="input-group-text">Rp</span>
+                <input type="number" class="form-control" name="harga_beli" min="0" step="0.01" placeholder="0">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Harga Jual</label>
+              <div class="input-group">
+                <span class="input-group-text">Rp</span>
+                <input type="number" class="form-control" name="harga_jual" min="0" step="0.01" placeholder="0">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Kategori</label>
+              <select class="form-select" name="kategori_id">
+                <option value="">Tanpa kategori</option>
+                {% for kategori in kategoris %}
+                <option value="{{ kategori.id }}">{{ kategori.nama }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Deskripsi</label>
+              <textarea class="form-control" name="deskripsi" rows="2" placeholder="Deskripsi singkat produk (opsional)"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan Barang</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="fas fa-pencil-alt" style="color:var(--accent)"></i> Edit Barang</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="POST" action="/stok/update">
+        <div class="modal-body">
+          <input type="hidden" id="editId" name="id">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nama Barang <span style="color:var(--danger)">*</span></label>
+              <input type="text" class="form-control" id="editNama" name="nama" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">SKU <span style="color:var(--danger)">*</span></label>
+              <input type="text" class="form-control" id="editSKU" name="SKU" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Jumlah Stok <span style="color:var(--danger)">*</span></label>
+              <input type="number" class="form-control" id="editJumlahStok" name="jumlah_stok" min="0" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Harga Beli</label>
+              <div class="input-group">
+                <span class="input-group-text">Rp</span>
+                <input type="number" class="form-control" id="editHargaBeli" name="harga_beli" min="0" step="0.01">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Harga Jual</label>
+              <div class="input-group">
+                <span class="input-group-text">Rp</span>
+                <input type="number" class="form-control" id="editHargaJual" name="harga_jual" min="0" step="0.01">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Kategori</label>
+              <select class="form-select" id="editKategoriId" name="kategori_id">
+                <option value="">Tanpa kategori</option>
+                {% for kategori in kategoris %}
+                <option value="{{ kategori.id }}">{{ kategori.nama }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Deskripsi</label>
+              <textarea class="form-control" id="editDeskripsi" name="deskripsi" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan Perubahan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Hapus -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="fas fa-exclamation-triangle" style="color:var(--danger)"></i> Hapus Barang</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center" style="padding:1.5rem 1.25rem;">
+        <p style="color:var(--text-2);font-size:.875rem;">Yakin ingin menghapus</p>
+        <p style="font-weight:600;color:var(--danger);" id="deleteItemName"></p>
+        <p style="font-size:.775rem;color:var(--text-3);">Tindakan ini tidak dapat dibatalkan.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+        <form id="deleteForm" method="POST" class="d-inline">
+          <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Hapus</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof simpleDatatables !== 'undefined') {
+    new simpleDatatables.DataTable('#datatablesSimple');
+  }
+
+  // Edit modal
+  document.querySelectorAll('.btn-edit').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.getElementById('editId').value         = this.dataset.id;
+      document.getElementById('editNama').value       = this.dataset.nama;
+      document.getElementById('editSKU').value        = this.dataset.sku;
+      document.getElementById('editJumlahStok').value = this.dataset.jumlah_stok;
+      document.getElementById('editHargaBeli').value  = this.dataset.harga_beli;
+      document.getElementById('editHargaJual').value  = this.dataset.harga_jual;
+      document.getElementById('editDeskripsi').value  = this.dataset.deskripsi;
+      const sel = document.getElementById('editKategoriId');
+      if (sel) sel.value = this.dataset.kategori_id || '';
+    });
+  });
+
+  // Delete modal
+  document.querySelectorAll('.delete-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.getElementById('deleteItemName').textContent = this.dataset.nama;
+      document.getElementById('deleteForm').action = '/stok/hapus/' + this.dataset.id;
+      new bootstrap.Modal(document.getElementById('deleteModal')).show();
+    });
+  });
+});
+</script>
+{% endblock %}

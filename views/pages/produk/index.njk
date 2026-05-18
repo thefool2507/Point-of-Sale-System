@@ -1,0 +1,1172 @@
+{% extends "layout/masterLayout.njk" %} {% block content %}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        .header h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 1rem;
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            color: white;
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(78, 205, 196, 0.4);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .table-container {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f8f9ff;
+        }
+
+        .table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .badge-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .badge-warning {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pagination-info {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .pagination-nav {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .pagination-nav a,
+        .pagination-nav span {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #667eea;
+            background: white;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+
+        .pagination-nav a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .pagination-nav .active {
+            background: #667eea;
+            color: white;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state h3 {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .empty-state p {
+            color: #999;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .close {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+            border: none;
+            background: none;
+        }
+
+        .close:hover {
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-control select {
+            cursor: pointer;
+        }
+
+        .currency {
+            color: #28a745;
+            font-weight: 500;
+        }
+
+        .stock-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stock-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .stock-high {
+            background-color: #28a745;
+        }
+
+        .stock-medium {
+            background-color: #ffc107;
+        }
+
+        .stock-low {
+            background-color: #dc3545;
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-container {
+                max-width: none;
+            }
+
+            .actions {
+                justify-content: center;
+            }
+
+            .table-container {
+                overflow-x: auto;
+            }
+
+            .table {
+                min-width: 800px;
+            }
+
+            .pagination-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+
+        .loading i {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-boxes"></i> {{ title }}</h1>
+            <p>Kelola inventori produk Anda dengan mudah</p>
+        </div>
+
+        <!-- Alert Messages -->
+        <div id="alertSuccess" class="alert alert-success" style="display: none;">
+            <i class="fas fa-check-circle"></i> <span id="successMessage"></span>
+        </div>
+        <div id="alertError" class="alert alert-danger" style="display: none;">
+            <i class="fas fa-exclamation-circle"></i> <span id="errorMessage"></span>
+        </div>
+
+        <!-- Error Display from Server -->
+        {% if error %}
+        <div class="alert alert-danger">
+            <i class="fas fa-exclamation-circle"></i> {{ error }}
+        </div>
+        {% endif %}
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" 
+                       placeholder="Cari produk berdasarkan nama, SKU, atau deskripsi..." 
+                       value="{{ search }}">
+                <button class="btn btn-primary" onclick="searchProducts()">
+                    <i class="fas fa-search"></i> Cari
+                </button>
+            </div>
+            <div class="actions">
+                <button class="btn btn-success" onclick="openAddModal()">
+                    <i class="fas fa-plus"></i> Tambah Produk
+                </button>
+                <a href="/produk/export" class="btn btn-warning">
+                    <i class="fas fa-download"></i> Export Excel
+                </a>
+                <button class="btn btn-primary" onclick="openImportModal()">
+                    <i class="fas fa-upload"></i> Import Excel
+                </button>
+            </div>
+        </div>
+
+        <!-- Products Table -->
+        {% if products.length > 0 %}
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama Produk</th>
+                        <th>SKU</th>
+                        <th>Kategori</th>
+                        <th>Stok</th>
+                        <th>Harga Beli</th>
+                        <th>Harga Jual</th>
+                        <th>Dibuat</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                        <td>{{ product.id }}</td>
+                        <td>
+                            <strong>{{ product.nama }}</strong>
+                            {% if product.deskripsi %}
+                            <br><small style="color: #666;">{{ product.deskripsi }}</small>
+                            {% endif %}
+                        </td>
+                        <td><code>{{ product.SKU }}</code></td>
+                        <td>{{ product.kategori_nama or '-' }}</td>
+                        <td>
+                            <div class="stock-status">
+                                <div class="stock-indicator {% if product.jumlah_stok > 20 %}stock-high{% elif product.jumlah_stok > 5 %}stock-medium{% else %}stock-low{% endif %}"></div>
+                                {{ product.jumlah_stok }}
+                            </div>
+                        </td>
+                        <td class="currency">Rp {{ formatNumber(product.harga_beli) }}</td>
+                        <td class="currency">Rp {{ formatNumber(product.harga_jual) }}</td>
+                        <td>{{ formatDate(product.created_at) }}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" onclick="viewProduct({{ product.id }})" title="Lihat Detail">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-sm btn-warning" onclick="editProduct({{ product.id }})" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-sm btn-danger" 
+                                    onclick="deleteProduct({{ product.id }}, '{{ product.nama | replace("'", "\\'") }}')" 
+                                    title="Hapus">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination Info -->
+        <div class="pagination-info">
+            Menampilkan {{ ((currentPage - 1) * limit) + 1 }} - {{ math.min(currentPage * limit, totalProducts) }} dari {{ totalProducts }} produk
+        </div>
+
+        <!-- Pagination -->
+        {% if totalPages > 1 %}
+        <div class="pagination">
+            <div class="pagination-nav">
+                {% if currentPage > 1 %}
+                <a href="?page={{ currentPage - 1 }}&limit={{ limit }}&search={{ search | urlencode }}">
+                    <i class="fas fa-chevron-left"></i> Sebelumnya
+                </a>
+                {% endif %}
+
+                {% set startPage = math.max(1, currentPage - 2) %}
+                {% set endPage = math.min(totalPages, currentPage + 2) %}
+
+                {% if startPage > 1 %}
+                <a href="?page=1&limit={{ limit }}&search={{ search | urlencode }}">1</a>
+                {% if startPage > 2 %}
+                <span>...</span>
+                {% endif %}
+                {% endif %}
+
+                {% for page in range(startPage, endPage + 1) %}
+                    {% if page == currentPage %}
+                    <span class="active">{{ page }}</span>
+                    {% else %}
+                    <a href="?page={{ page }}&limit={{ limit }}&search={{ search | urlencode }}">{{ page }}</a>
+                    {% endif %}
+                {% endfor %}
+
+                {% if endPage < totalPages %}
+                {% if endPage < totalPages - 1 %}
+                <span>...</span>
+                {% endif %}
+                <a href="?page={{ totalPages }}&limit={{ limit }}&search={{ search | urlencode }}">{{ totalPages }}</a>
+                {% endif %}
+
+                {% if currentPage < totalPages %}
+                <a href="?page={{ currentPage + 1 }}&limit={{ limit }}&search={{ search | urlencode }}">
+                    Selanjutnya <i class="fas fa-chevron-right"></i>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% else %}
+        <!-- Empty State -->
+        <div class="empty-state">
+            <i class="fas fa-box-open"></i>
+            <h3>Belum ada produk</h3>
+            <p>{% if search %}Tidak ada produk yang sesuai dengan pencarian "{{ search }}"{% else %}Mulai tambahkan produk pertama Anda untuk mengelola inventori{% endif %}</p>
+            {% if not search %}
+            <button class="btn btn-success" onclick="openAddModal()" style="margin-top: 1rem;">
+                <i class="fas fa-plus"></i> Tambah Produk Pertama
+            </button>
+            {% else %}
+            <button class="btn btn-secondary" onclick="clearSearch()" style="margin-top: 1rem;">
+                <i class="fas fa-times"></i> Hapus Filter
+            </button>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Add/Edit Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Tambah Produk</h3>
+                <button class="close" onclick="closeModal()">&times;</button>
+            </div>
+            <form id="productForm">
+                <input type="hidden" id="productId">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nama">Nama Produk *</label>
+                        <input type="text" id="nama" name="nama" class="form-control" required maxlength="255">
+                    </div>
+                    <div class="form-group">
+                        <label for="SKU">SKU *</label>
+                        <input type="text" id="SKU" name="SKU" class="form-control" required maxlength="50" style="text-transform: uppercase;">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea id="deskripsi" name="deskripsi" class="form-control" rows="3" maxlength="1000"></textarea>
+                    <small class="form-text text-muted">Maksimal 1000 karakter</small>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="kategori_id">Kategori</label>
+                        <select id="kategori_id" name="kategori_id" class="form-control">
+                            <option value="">Pilih Kategori</option>
+                            {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.nama }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="jumlah_stok">Jumlah Stok</label>
+                        <input type="number" id="jumlah_stok" name="jumlah_stok" class="form-control" min="0" value="0">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="harga_beli">Harga Beli (Rp)</label>
+                        <input type="number" id="harga_beli" name="harga_beli" class="form-control" min="0" step="0.01" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="harga_jual">Harga Jual (Rp)</label>
+                        <input type="number" id="harga_jual" name="harga_jual" class="form-control" min="0" step="0.01" value="0">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Batal</button>
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save"></i> Simpan
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Import Modal -->
+    <div id="importModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Import Produk dari Excel</h3>
+                <button class="close" onclick="closeImportModal()">&times;</button>
+            </div>
+            <form id="importForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="excelFile">Pilih File Excel *</label>
+                    <input type="file" id="excelFile" name="file" class="form-control" accept=".xlsx,.xls" required>
+                    <small class="form-text text-muted">
+                        Format kolom: Nama Produk, SKU, Deskripsi, Kategori, Stok, Harga Beli, Harga Jual<br>
+                        Maksimal ukuran file: 5MB | Maksimal 1000 produk per file
+                    </small>
+                </div>
+                
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>Catatan:</strong>
+                    <ul style="margin: 0.5rem 0 0 1rem;">
+                        <li>Nama Produk dan SKU wajib diisi</li>
+                        <li>SKU harus unik (tidak boleh duplikat)</li>
+                        <li>Harga dan stok tidak boleh negatif</li>
+                        <li>Baris pertama akan diabaikan (header)</li>
+                    </ul>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeImportModal()">Batal</button>
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-upload"></i> Import
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- View Product Modal -->
+    <div id="viewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Detail Produk</h3>
+                <button class="close" onclick="closeViewModal()">&times;</button>
+            </div>
+            <div id="productDetails">
+                <!-- Product details will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeViewModal()">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Memproses...</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Global variables
+    let isEditing = false;
+    let currentProductId = null;
+
+    // Utility functions
+    function formatNumber(num) {
+        return new Intl.NumberFormat('id-ID').format(num);
+    }
+
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('id-ID', {
+            day: '2-digit',
+            month: '2-digit', 
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+    }
+
+    function showLoading() {
+        document.getElementById('loadingOverlay').style.display = 'flex';
+    }
+
+    function hideLoading() {
+        document.getElementById('loadingOverlay').style.display = 'none';
+    }
+
+    // Search functionality
+    function searchProducts() {
+        const search = document.getElementById('searchInput').value.trim();
+        const url = new URL(window.location);
+        url.searchParams.set('search', search);
+        url.searchParams.set('page', '1');
+        window.location.href = url.toString();
+    }
+
+    function clearSearch() {
+        const url = new URL(window.location);
+        url.searchParams.delete('search');
+        url.searchParams.set('page', '1');
+        window.location.href = url.toString();
+    }
+
+    // Enter key search
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            searchProducts();
+        }
+    });
+
+    // Modal functions
+    function openAddModal() {
+        document.getElementById('modalTitle').textContent = 'Tambah Produk';
+        document.getElementById('productForm').reset();
+        document.getElementById('productId').value = '';
+        isEditing = false;
+        currentProductId = null;
+        document.getElementById('productModal').style.display = 'block';
+        
+        // Focus on first input
+        setTimeout(() => {
+            document.getElementById('nama').focus();
+        }, 100);
+    }
+
+    function closeModal() {
+        document.getElementById('productModal').style.display = 'none';
+        document.getElementById('productForm').reset();
+        isEditing = false;
+        currentProductId = null;
+    }
+
+    function openImportModal() {
+        document.getElementById('importForm').reset();
+        document.getElementById('importModal').style.display = 'block';
+    }
+
+    function closeImportModal() {
+        document.getElementById('importModal').style.display = 'none';
+        document.getElementById('importForm').reset();
+    }
+
+    function closeViewModal() {
+        document.getElementById('viewModal').style.display = 'none';
+        document.getElementById('productDetails').innerHTML = '';
+    }
+
+    // Product operations
+    async function viewProduct(id) {
+        try {
+            showLoading();
+            const response = await fetch(`/produk/${id}`, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const product = await response.json();
+            
+            document.getElementById('productDetails').innerHTML = `
+                <div class="product-detail">
+                    <div class="detail-row">
+                        <label>ID:</label>
+                        <span>${product.id}</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Nama Produk:</label>
+                        <span>${product.nama}</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>SKU:</label>
+                        <span><code>${product.SKU}</code></span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Deskripsi:</label>
+                        <span>${product.deskripsi || '-'}</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Kategori:</label>
+                        <span>${product.kategori_nama || '-'}</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Jumlah Stok:</label>
+                        <span class="stock-badge ${product.jumlah_stok > 20 ? 'stock-high' : product.jumlah_stok > 5 ? 'stock-medium' : 'stock-low'}">${product.jumlah_stok}</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Harga Beli:</label>
+                        <span>Rp ${formatNumber(product.harga_beli)}</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Harga Jual:</label>
+                        <span>Rp ${formatNumber(product.harga_jual)}</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Margin:</label>
+                        <span>Rp ${formatNumber(product.harga_jual - product.harga_beli)} (${product.harga_beli > 0 ? (((product.harga_jual - product.harga_beli) / product.harga_beli) * 100).toFixed(1) : 0}%)</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Dibuat:</label>
+                        <span>${formatDate(product.created_at)}</span>
+                    </div>
+                    <div class="detail-row">
+                        <label>Diperbarui:</label>
+                        <span>${formatDate(product.updated_at)}</span>
+                    </div>
+                </div>
+            `;
+            document.getElementById('viewModal').style.display = 'block';
+            
+        } catch (error) {
+            console.error('Error viewing product:', error);
+            showError('Terjadi kesalahan saat mengambil data produk');
+        } finally {
+            hideLoading();
+        }
+    }
+
+    async function editProduct(id) {
+        try {
+            showLoading();
+            const response = await fetch(`/produk/${id}`, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const product = await response.json();
+            
+            document.getElementById('modalTitle').textContent = 'Edit Produk';
+            document.getElementById('productId').value = product.id;
+            document.getElementById('nama').value = product.nama;
+            document.getElementById('SKU').value = product.SKU;
+            document.getElementById('deskripsi').value = product.deskripsi || '';
+            document.getElementById('kategori_id').value = product.kategori_id || '';
+            document.getElementById('jumlah_stok').value = product.jumlah_stok;
+            document.getElementById('harga_beli').value = product.harga_beli;
+            document.getElementById('harga_jual').value = product.harga_jual;
+            
+            isEditing = true;
+            currentProductId = id;
+            document.getElementById('productModal').style.display = 'block';
+            
+            // Focus on first input
+            setTimeout(() => {
+                document.getElementById('nama').focus();
+            }, 100);
+            
+        } catch (error) {
+            console.error('Error editing product:', error);
+            showError('Terjadi kesalahan saat mengambil data produk');
+        } finally {
+            hideLoading();
+        }
+    }
+
+    async function deleteProduct(id, nama) {
+        if (!confirm(`Apakah Anda yakin ingin menghapus produk "${nama}"?\n\nTindakan ini tidak dapat dibatalkan.`)) {
+            return;
+        }
+
+        try {
+            showLoading();
+            const response = await fetch(`/produk/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok) {
+                showSuccess(result.message);
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1500);
+            } else {
+                showError(result.message);
+            }
+        } catch (error) {
+            console.error('Error deleting product:', error);
+            showError('Terjadi kesalahan saat menghapus produk');
+        } finally {
+            hideLoading();
+        }
+    }
+
+    // Form submission
+    document.getElementById('productForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+        
+        // Remove empty productId for new products
+        if (!data.productId) {
+            delete data.productId;
+        }
+        
+        // Validate required fields
+        if (!data.nama || !data.nama.trim()) {
+            showError('Nama produk wajib diisi');
+            return;
+        }
+        
+        if (!data.SKU || !data.SKU.trim()) {
+            showError('SKU wajib diisi');
+            return;
+        }
+        
+        try {
+            showLoading();
+            const url = isEditing ? `/produk/${currentProductId}` : '/produk';
+            const method = isEditing ? 'PUT' : 'POST';
+            
+            const response = await fetch(url, {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok) {
+                showSuccess(result.message);
+                closeModal();
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1500);
+            } else {
+                showError(result.message);
+            }
+        } catch (error) {
+            console.error('Error saving product:', error);
+            showError('Terjadi kesalahan saat menyimpan produk');
+        } finally {
+            hideLoading();
+        }
+    });
+
+    // Import form submission
+    document.getElementById('importForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const fileInput = document.getElementById('excelFile');
+        const file = fileInput.files[0];
+        
+        if (!file) {
+            showError('Pilih file Excel terlebih dahulu');
+            return;
+        }
+        
+        // Validate file size (5MB)
+        if (file.size > 5 * 1024 * 1024) {
+            showError('Ukuran file terlalu besar (maksimal 5MB)');
+            return;
+        }
+        
+        // Validate file type
+        const allowedTypes = [
+            'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'application/vnd.ms-excel'
+        ];
+        if (!allowedTypes.includes(file.type)) {
+            showError('Format file tidak didukung. Gunakan file Excel (.xlsx atau .xls)');
+            return;
+        }
+        
+        const formData = new FormData(this);
+        
+        try {
+            showLoading();
+            const response = await fetch('/produk/import', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok) {
+                let message = result.message;
+                if (result.errors && result.errors.length > 0) {
+                    message += `\n\nPeringatan:\n${result.errors.slice(0, 5).join('\n')}`;
+                    if (result.errors.length > 5) {
+                        message += `\n... dan ${result.errors.length - 5} error lainnya`;
+                    }
+                }
+                showSuccess(message);
+                closeImportModal();
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2000);
+            } else {
+                let errorMessage = result.message;
+                if (result.errors && result.errors.length > 0) {
+                    errorMessage += `\n\nDetail error:\n${result.errors.slice(0, 5).join('\n')}`;
+                    if (result.errors.length > 5) {
+                        errorMessage += `\n... dan ${result.errors.length - 5} error lainnya`;
+                    }
+                }
+                showError(errorMessage);
+            }
+        } catch (error) {
+            console.error('Error importing products:', error);
+            showError('Terjadi kesalahan saat import data');
+        } finally {
+            hideLoading();
+        }
+    });
+
+    // Alert functions
+    function showSuccess(message) {
+        const alertElement = document.getElementById('alertSuccess');
+        const messageElement = document.getElementById('successMessage');
+        
+        messageElement.textContent = message;
+        alertElement.style.display = 'block';
+        document.getElementById('alertError').style.display = 'none';
+        
+        // Auto hide after 5 seconds
+        setTimeout(() => {
+            alertElement.style.display = 'none';
+        }, 5000);
+        
+        // Scroll to top to show alert
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showError(message) {
+        const alertElement = document.getElementById('alertError');
+        const messageElement = document.getElementById('errorMessage');
+        
+        messageElement.textContent = message;
+        alertElement.style.display = 'block';
+        document.getElementById('alertSuccess').style.display = 'none';
+        
+        // Auto hide after 8 seconds (longer for errors)
+        setTimeout(() => {
+            alertElement.style.display = 'none';
+        }, 8000);
+        
+        // Scroll to top to show alert
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+        const productModal = document.getElementById('productModal');
+        const importModal = document.getElementById('importModal');
+        const viewModal = document.getElementById('viewModal');
+        
+        if (e.target === productModal) {
+            closeModal();
+        }
+        if (e.target === importModal) {
+            closeImportModal();
+        }
+        if (e.target === viewModal) {
+            closeViewModal();
+        }
+    });
+
+    // Auto-format SKU to uppercase
+    document.getElementById('SKU').addEventListener('input', function(e) {
+        this.value = this.value.toUpperCase();
+    });
+
+    // Character counter for description
+    document.getElementById('deskripsi').addEventListener('input', function(e) {
+        const maxLength = 1000;
+        const currentLength = this.value.length;
+        const remaining = maxLength - currentLength;
+        
+        // Find or create counter element
+        let counter = this.parentNode.querySelector('.char-counter');
+        if (!counter) {
+            counter = document.createElement('small');
+            counter.className = 'char-counter form-text text-muted';
+            this.parentNode.appendChild(counter);
+        }
+        
+        counter.textContent = `${remaining} karakter tersisa`;
+        counter.style.color = remaining < 50 ? '#dc3545' : '#6c757d';
+    });
+
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hide alerts that might be shown from server
+        setTimeout(() => {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => {
+                if (alert.style.display !== 'none') {
+                    setTimeout(() => {
+                        alert.style.display = 'none';
+                    }, 5000);
+                }
+            });
+        }, 100);
+        
+        // Focus on search if there's a search term
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput.value) {
+            searchInput.focus();
+        }
+    });
+</script>
+{% endblock %}

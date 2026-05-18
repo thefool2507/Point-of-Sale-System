@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Masuk — Funcode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body {
+      font-family:'DM Sans',sans-serif;
+      background:#F1F5F9;
+      min-height:100vh;
+      display:flex; align-items:center; justify-content:center;
+      padding:1.5rem;
+    }
+    .auth-card {
+      background:#fff;
+      border:1px solid #E2E8F0;
+      border-radius:16px;
+      box-shadow:0 4px 24px rgba(0,0,0,.07);
+      width:100%; max-width:400px;
+      padding:2.5rem;
+    }
+    .auth-logo {
+      display:flex; align-items:center; justify-content:center; gap:.625rem;
+      margin-bottom:2rem;
+    }
+    .auth-logo-icon {
+      width:40px; height:40px;
+      background:#2563EB;
+      border-radius:10px;
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; font-size:1.1rem;
+    }
+    .auth-logo-name {
+      font-size:1.25rem; font-weight:700;
+      letter-spacing:-.3px; color:#0F172A;
+    }
+    .auth-title { font-size:1.1rem; font-weight:700; color:#0F172A; margin-bottom:.25rem; }
+    .auth-sub { font-size:.8125rem; color:#64748B; margin-bottom:1.75rem; }
+    .form-label {
+      font-size:.8rem; font-weight:500;
+      color:#475569; display:block; margin-bottom:.35rem;
+    }
+    .form-control {
+      width:100%; padding:.525rem .75rem;
+      border:1px solid #E2E8F0; border-radius:8px;
+      font-size:.8125rem; color:#0F172A;
+      background:#fff; outline:none;
+      transition:border-color .15s, box-shadow .15s;
+    }
+    .form-control:focus {
+      border-color:#2563EB;
+      box-shadow:0 0 0 3px rgba(37,99,235,.12);
+    }
+    .form-control::placeholder { color:#94A3B8; }
+    .mb-field { margin-bottom:1.125rem; }
+    .input-icon-wrap { position:relative; }
+    .input-icon {
+      position:absolute; left:.75rem; top:50%; transform:translateY(-50%);
+      color:#94A3B8; font-size:.8rem; pointer-events:none;
+    }
+    .input-icon ~ .form-control { padding-left:2.125rem; }
+    .btn-auth {
+      width:100%; padding:.6rem 1rem;
+      background:#2563EB; border:none; border-radius:8px;
+      color:#fff; font-family:'DM Sans',sans-serif;
+      font-size:.875rem; font-weight:600;
+      cursor:pointer; margin-top:.25rem;
+      transition:background .15s;
+    }
+    .btn-auth:hover { background:#1D4ED8; }
+    .auth-footer { text-align:center; margin-top:1.5rem; font-size:.75rem; color:#94A3B8; }
+    .alert { border-radius:8px; padding:.6rem .875rem; font-size:.8rem; margin-bottom:1rem; border:1px solid; }
+    .alert-danger  { background:#FEF2F2; border-color:#FECACA; color:#991B1B; }
+    .alert-success { background:#ECFDF5; border-color:#A7F3D0; color:#065F46; }
+    .divider-text {
+      display:flex; align-items:center; gap:.75rem;
+      margin:1.25rem 0; font-size:.75rem; color:#94A3B8;
+    }
+    .divider-text::before, .divider-text::after {
+      content:''; flex:1; height:1px; background:#E2E8F0;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-card">
+    <div class="auth-logo">
+      <div class="auth-logo-icon"><i class="fas fa-store"></i></div>
+      <span class="auth-logo-name">Funcode</span>
+    </div>
+
+    <h1 class="auth-title">Selamat datang kembali</h1>
+    <p class="auth-sub">Masuk ke akun Anda untuk melanjutkan</p>
+
+    {% include "components/alert_flash_message.njk" %}
+
+    {% if flash and flash.error %}
+    <div class="alert alert-danger">{{ flash.error }}</div>
+    {% endif %}
+
+    <form action="/login" method="post">
+      <div class="mb-field">
+        <label class="form-label" for="inputEmail">Email</label>
+        <div class="input-icon-wrap">
+          <i class="fas fa-envelope input-icon"></i>
+          <input class="form-control" id="inputEmail" type="email" name="email"
+                 placeholder="nama@contoh.com" required autocomplete="email" />
+        </div>
+      </div>
+      <div class="mb-field">
+        <label class="form-label" for="inputPassword">Kata Sandi</label>
+        <div class="input-icon-wrap">
+          <i class="fas fa-lock input-icon"></i>
+          <input class="form-control" id="inputPassword" type="password" name="password"
+                 placeholder="••••••••" required autocomplete="current-password" />
+        </div>
+      </div>
+      <button class="btn-auth" type="submit">Masuk</button>
+    </form>
+
+    <p class="auth-footer">Belum punya akun? Hubungi administrator Anda.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

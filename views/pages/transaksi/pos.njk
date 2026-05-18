@@ -1,0 +1,322 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Kasir</h1>
+    <p class="page-subtitle">Point of Sale — pilih produk dan proses pembayaran</p>
+  </div>
+  <div class="d-flex gap-2">
+    <a href="/transaksi/index" class="btn btn-outline-secondary btn-sm">
+      <i class="fas fa-list-ul"></i> Riwayat
+    </a>
+  </div>
+</div>
+
+<!-- Stats Row -->
+<div class="row g-3 mb-4">
+  <div class="col-sm-3">
+    <div class="card stat-card stat-accent-green">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-money-bill-wave"></i></div>
+        <div class="stat-label">Penjualan Hari Ini</div>
+        <div class="stat-value mt-1" style="font-size:1.2rem;">Rp {{ stats.today_sales.toLocaleString('id-ID') if stats.today_sales else '0' }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card stat-card stat-accent-blue">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-receipt"></i></div>
+        <div class="stat-label">Transaksi</div>
+        <div class="stat-value mt-1" style="font-size:1.2rem;">{{ stats.today_transactions or 0 }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card stat-card stat-accent-cyan">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-label">Pelanggan</div>
+        <div class="stat-value mt-1" style="font-size:1.2rem;">{{ stats.total_customers or 0 }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card stat-card stat-accent-amber">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-boxes"></i></div>
+        <div class="stat-label">Stok Tersedia</div>
+        <div class="stat-value mt-1" style="font-size:1.2rem;">{{ stats.total_stock or 0 }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main POS Area -->
+<div class="row g-3">
+  <!-- Product Catalog -->
+  <div class="col-lg-7">
+    <div class="card h-100">
+      <div class="card-header">
+        <h6 class="card-header-title"><i class="fas fa-box"></i> Katalog Produk</h6>
+        <div class="d-flex gap-2">
+          <div class="d-flex" style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;width:240px;">
+            <input type="text" id="search-input" placeholder="Cari produk / SKU…"
+                   style="border:none;background:transparent;padding:.4rem .75rem;font-size:.8rem;outline:none;flex:1;color:var(--text-1);">
+            <button id="search-btn" style="border:none;background:transparent;padding:0 .75rem;color:var(--text-3);cursor:pointer;">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body" style="overflow-y:auto;max-height:calc(100vh - 340px);">
+        <div id="product-grid">
+          {% for barang in barangs %}
+          <div class="product-item"
+               data-product-id="{{ barang.id }}"
+               data-name="{{ barang.nama }}"
+               data-sku="{{ barang.SKU }}"
+               data-price="{{ barang.harga_jual }}"
+               data-stock="{{ barang.jumlah_stok }}">
+            <div class="d-flex justify-content-between align-items-start">
+              <div style="flex:1;min-width:0;">
+                <div style="font-weight:600;font-size:.8375rem;margin-bottom:.15rem;">{{ barang.nama }}</div>
+                <code style="font-size:.72rem;color:var(--text-3);">{{ barang.SKU }}</code>
+              </div>
+              <div class="text-end ms-2" style="flex-shrink:0;">
+                <div style="font-weight:700;font-size:.875rem;color:var(--accent);">Rp {{ barang.harga_jual.toLocaleString('id-ID') }}</div>
+                <span class="badge {% if barang.jumlah_stok <= 0 %}bg-danger{% elif barang.jumlah_stok <= 5 %}bg-warning{% else %}bg-success{% endif %} mt-1">
+                  Stok: {{ barang.jumlah_stok }}
+                </span>
+              </div>
+            </div>
+          </div>
+          {% else %}
+          <div style="text-align:center;padding:3rem 1rem;color:var(--text-3);">
+            <i class="fas fa-box-open" style="font-size:2rem;margin-bottom:.75rem;display:block;opacity:.4;"></i>
+            <small>Tidak ada produk tersedia</small>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart & Checkout -->
+  <div class="col-lg-5">
+    <div class="card h-100">
+      <div class="card-header">
+        <h6 class="card-header-title"><i class="fas fa-shopping-cart"></i> Keranjang</h6>
+        <span class="badge bg-primary" id="cart-count">0 item</span>
+      </div>
+      <div class="card-body d-flex flex-column gap-3">
+        <!-- Customer -->
+        <div>
+          <label class="form-label">Pelanggan</label>
+          <select class="form-select" id="customer-select">
+            <option value="">Walk-in Customer</option>
+            {% for customer in customers %}
+            <option value="{{ customer.id }}">{{ customer.nama }} — {{ customer.email }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <!-- Items -->
+        <div>
+          <label class="form-label">Item <span id="cart-count-label" style="color:var(--text-3);font-weight:400;"></span></label>
+          <div id="cart-content" style="border:1px solid var(--border);border-radius:var(--radius);overflow-y:auto;max-height:260px;min-height:80px;background:var(--surface-2);">
+            <div id="empty-cart" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:80px;color:var(--text-3);font-size:.8rem;gap:.375rem;">
+              <i class="fas fa-shopping-cart" style="font-size:1.25rem;opacity:.4;"></i>
+              Klik produk untuk menambahkan
+            </div>
+          </div>
+        </div>
+
+        <!-- Totals -->
+        <div class="total-panel">
+          <div class="total-row">
+            <span>Subtotal</span>
+            <span id="subtotal">Rp 0</span>
+          </div>
+          <div class="total-row">
+            <span>Pajak (10%)</span>
+            <span id="tax">Rp 0</span>
+          </div>
+          <div class="total-row grand">
+            <span>Total</span>
+            <span id="total" style="color:var(--accent);">Rp 0</span>
+          </div>
+        </div>
+
+        <!-- Payment Method -->
+        <div>
+          <label class="form-label">Metode Pembayaran</label>
+          <select class="form-select" id="payment-method">
+            <option value="tunai">Tunai</option>
+            <option value="kartu_kredit">Kartu Kredit</option>
+            <option value="kartu_debit">Kartu Debit</option>
+            <option value="transfer">Transfer Bank</option>
+            <option value="e-wallet">E-Wallet</option>
+          </select>
+        </div>
+
+        <!-- Actions -->
+        <div class="d-grid gap-2 mt-auto">
+          <button class="btn btn-success btn-lg" id="process-btn" disabled>
+            <i class="fas fa-credit-card"></i> Proses Pembayaran
+          </button>
+          <button class="btn btn-outline-danger btn-sm" id="clear-btn">
+            <i class="fas fa-trash-alt"></i> Kosongkan Keranjang
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let cart = [];
+const products = {
+  {% for barang in barangs %}
+  {{ barang.id }}: { name:'{{ barang.nama | replace("'","\\'")|safe }}', price:{{ barang.harga_jual }}, sku:'{{ barang.SKU }}', stock:{{ barang.jumlah_stok }}, desc:'{{ barang.deskripsi | replace("'","\\'")|safe }}' }{% if not loop.last %},{% endif %}
+  {% endfor %}
+};
+
+const fmt = n => 'Rp ' + Number(n).toLocaleString('id-ID');
+
+function addToCart(id) {
+  const p = products[id]; if (!p) return;
+  const ex = cart.find(i => i.id === id);
+  if (ex) {
+    if (ex.qty < p.stock) ex.qty++;
+    else { showToast('Stok tidak mencukupi!', 'warning'); return; }
+  } else {
+    cart.push({ id, name: p.name, price: p.price, sku: p.sku, qty: 1 });
+  }
+  renderCart();
+}
+
+function updateQty(id, delta) {
+  const item = cart.find(i => i.id === id);
+  const p = products[id];
+  if (!item) return;
+  const nq = item.qty + delta;
+  if (nq <= 0) cart = cart.filter(i => i.id !== id);
+  else if (nq <= p.stock) item.qty = nq;
+  else { showToast('Stok tidak mencukupi!', 'warning'); return; }
+  renderCart();
+}
+
+function removeItem(id) { cart = cart.filter(i => i.id !== id); renderCart(); }
+
+function renderCart() {
+  const content = document.getElementById('cart-content');
+  const emptyCart = document.getElementById('empty-cart');
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const tax = total * .1;
+  const grand = total + tax;
+  const itemCount = cart.reduce((s, i) => s + i.qty, 0);
+
+  document.getElementById('cart-count').textContent = itemCount + ' item';
+  document.getElementById('cart-count-label').textContent = itemCount ? `(${itemCount})` : '';
+  document.getElementById('subtotal').textContent = fmt(total);
+  document.getElementById('tax').textContent = fmt(tax);
+  document.getElementById('total').textContent = fmt(grand);
+  document.getElementById('process-btn').disabled = cart.length === 0;
+
+  if (!cart.length) {
+    content.innerHTML = '';
+    content.appendChild(document.getElementById('empty-cart') || (() => {
+      const d = document.createElement('div');
+      d.id = 'empty-cart';
+      d.style = 'display:flex;flex-direction:column;align-items:center;justify-content:center;height:80px;color:var(--text-3);font-size:.8rem;gap:.375rem;';
+      d.innerHTML = '<i class="fas fa-shopping-cart" style="font-size:1.25rem;opacity:.4;"></i>Klik produk untuk menambahkan';
+      return d;
+    })());
+    content.style.display = '';
+    return;
+  }
+
+  content.innerHTML = cart.map(item => `
+    <div class="cart-item" style="padding:.6rem .875rem;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;">
+        <div style="flex:1;min-width:0;">
+          <div style="font-weight:600;font-size:.8rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${item.name}</div>
+          <div style="font-size:.72rem;color:var(--text-3);">${fmt(item.price)} × ${item.qty}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.375rem;flex-shrink:0;">
+          <div style="font-weight:700;font-size:.8125rem;color:var(--accent);">${fmt(item.price * item.qty)}</div>
+          <button class="qty-btn" onclick="updateQty(${item.id}, -1)"><i class="fas fa-minus" style="font-size:.6rem;"></i></button>
+          <span style="font-size:.8rem;font-weight:600;min-width:18px;text-align:center;">${item.qty}</span>
+          <button class="qty-btn" onclick="updateQty(${item.id}, 1)"><i class="fas fa-plus" style="font-size:.6rem;"></i></button>
+          <button class="qty-btn" onclick="removeItem(${item.id})" style="color:var(--danger);border-color:var(--danger);">
+            <i class="fas fa-times" style="font-size:.65rem;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+async function processPayment() {
+  if (!cart.length) return;
+  const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const tax = subtotal * .1;
+  const btn = document.getElementById('process-btn');
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('/transaksi/process', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        customer_id: document.getElementById('customer-select').value || null,
+        payment_method: document.getElementById('payment-method').value,
+        items: cart.map(i => ({ product_id: i.id, quantity: i.qty, price: i.price })),
+        subtotal, tax, total: subtotal + tax
+      })
+    });
+    const data = await res.json();
+    if (data.success) {
+      showToast('Transaksi berhasil!', 'success');
+      cart = []; renderCart();
+      setTimeout(() => location.reload(), 1000);
+    } else {
+      showToast('Error: ' + (data.message || 'Terjadi kesalahan'), 'error');
+      btn.innerHTML = '<i class="fas fa-credit-card"></i> Proses Pembayaran';
+      btn.disabled = false;
+    }
+  } catch(e) {
+    showToast('Gagal memproses pembayaran', 'error');
+    btn.innerHTML = '<i class="fas fa-credit-card"></i> Proses Pembayaran';
+    btn.disabled = false;
+  }
+}
+
+function showToast(msg, type = 'success') {
+  const colors = { success:'#059669', error:'#DC2626', warning:'#D97706' };
+  Toastify({ text: msg, duration: 3000, gravity:'top', position:'right',
+    style:{ background: colors[type]||'#2563EB', borderRadius:'8px', fontSize:'.8125rem', padding:'.5rem 1rem' }
+  }).showToast();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.product-item').forEach(el => {
+    el.addEventListener('click', () => addToCart(parseInt(el.dataset.productId)));
+  });
+  document.getElementById('process-btn').addEventListener('click', processPayment);
+  document.getElementById('clear-btn').addEventListener('click', () => { cart = []; renderCart(); });
+  document.getElementById('search-input').addEventListener('input', e => {
+    const q = e.target.value.toLowerCase();
+    document.querySelectorAll('.product-item').forEach(el => {
+      const match = el.dataset.name.toLowerCase().includes(q) || el.dataset.sku.toLowerCase().includes(q);
+      el.style.display = match ? '' : 'none';
+    });
+  });
+  renderCart();
+});
+</script>
+{% endblock %}

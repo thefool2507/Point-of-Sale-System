@@ -1,0 +1,54 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Riwayat Stok</h1>
+    <p class="page-subtitle">Histori perubahan stok semua barang</p>
+  </div>
+  <a href="/stock-history/download" class="btn btn-outline-secondary btn-sm">
+    <i class="fas fa-file-excel"></i> Export
+  </a>
+</div>
+
+<div class="card">
+  <div class="card-header"><h6 class="card-header-title"><i class="fas fa-history"></i> Semua Perubahan Stok</h6></div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="datatablesSimple" class="table">
+        <thead>
+          <tr><th>ID</th><th>Barang</th><th>Jumlah</th><th>Tipe</th><th>Referensi</th><th>Keterangan</th><th>User</th></tr>
+        </thead>
+        <tbody>
+          {% for s in stockList %}
+          <tr>
+            <td style="color:var(--text-3);font-size:.75rem;">{{ s.id }}</td>
+            <td style="font-weight:500;">{{ s.barang_nama }}</td>
+            <td>
+              <span class="{% if s.tipe == 'masuk' %}text-success{% else %}text-danger{% endif %}" style="font-weight:600;font-family:'DM Mono',monospace;">
+                {{ '+' if s.tipe == 'masuk' else '-' }}{{ s.jumlah }}
+              </span>
+            </td>
+            <td>
+              {% if s.tipe == 'masuk' %}<span class="badge bg-success">Masuk</span>
+              {% elif s.tipe == 'keluar' %}<span class="badge bg-danger">Keluar</span>
+              {% else %}<span class="badge bg-secondary">{{ s.tipe }}</span>{% endif %}
+            </td>
+            <td>
+              {% if s.reference_id %}<code style="font-size:.75rem;">#{{ s.reference_id }} ({{ s.reference_type }})</code>
+              {% else %}<span style="color:var(--text-3);">—</span>{% endif %}
+            </td>
+            <td style="font-size:.8rem;color:var(--text-2);">{{ s.keterangan or '—' }}</td>
+            <td>{{ s.user_username or '—' }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>document.addEventListener('DOMContentLoaded',()=>{if(typeof simpleDatatables!=='undefined')new simpleDatatables.DataTable('#datatablesSimple');});</script>
+{% endblock %}

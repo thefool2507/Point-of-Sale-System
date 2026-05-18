@@ -1,0 +1,50 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Daftar Retur</h1>
+    <p class="page-subtitle">Riwayat semua transaksi retur</p>
+  </div>
+  <div class="d-flex gap-2">
+    <a href="/retur/download" class="btn btn-outline-secondary btn-sm"><i class="fas fa-file-excel"></i> Export</a>
+    <a href="/retur/baru" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Retur Baru</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header"><h6 class="card-header-title"><i class="fas fa-undo-alt"></i> Semua Retur</h6></div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="datatablesSimple" class="table">
+        <thead>
+          <tr><th>ID</th><th>Transaksi</th><th>Pelanggan</th><th>Kasir</th><th>Tanggal</th><th>Alasan</th><th>Total</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          {% for r in returList %}
+          <tr>
+            <td style="color:var(--text-3);font-size:.75rem;">{{ r.id }}</td>
+            <td><code style="font-size:.75rem;">#{{ r.transaction_id }}</code></td>
+            <td>{{ r.customer_nama or 'Walk-in' }}</td>
+            <td>{{ r.user_username or '—' }}</td>
+            <td style="font-size:.775rem;color:var(--text-2);">{{ r.tanggal_retur }}</td>
+            <td style="font-size:.8rem;max-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ r.alasan }}</td>
+            <td style="font-weight:500;">{{ r.total_pengembalian }}</td>
+            <td>
+              {% if r.status == 'approved' %}<span class="badge bg-success">Disetujui</span>
+              {% elif r.status == 'pending' %}<span class="badge bg-warning">Pending</span>
+              {% elif r.status == 'rejected' %}<span class="badge bg-danger">Ditolak</span>
+              {% else %}<span class="badge bg-secondary">{{ r.status or '—' }}</span>{% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>document.addEventListener('DOMContentLoaded',()=>{if(typeof simpleDatatables!=='undefined')new simpleDatatables.DataTable('#datatablesSimple');});</script>
+{% endblock %}

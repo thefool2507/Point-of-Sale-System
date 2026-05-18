@@ -1,0 +1,163 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Kategori Produk</h1>
+    <p class="page-subtitle">Kelola pengelompokan kategori barang</p>
+  </div>
+  <div class="d-flex gap-2 flex-wrap">
+    <a href="/kategori-produk/download" class="btn btn-outline-secondary btn-sm"><i class="fas fa-file-excel"></i> Export</a>
+    <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadModal"><i class="fas fa-upload"></i> Import</button>
+    <button class="btn btn-outline-secondary btn-sm" id="btnDownloadTemplate"><i class="fas fa-download"></i> Template</button>
+    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambahModal"><i class="fas fa-plus"></i> Tambah Kategori</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header"><h6 class="card-header-title"><i class="fas fa-tags"></i> Daftar Kategori</h6></div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="datatablesSimple" class="table">
+        <thead>
+          <tr><th>ID</th><th>Nama</th><th>Deskripsi</th><th>Aksi</th></tr>
+        </thead>
+        <tbody>
+          {% for k in kategoriList %}
+          <tr>
+            <td style="color:var(--text-3);font-size:.75rem;">{{ k.id }}</td>
+            <td style="font-weight:500;">{{ k.nama }}</td>
+            <td style="color:var(--text-2);font-size:.8rem;">{{ k.deskripsi or '—' }}</td>
+            <td>
+              <div class="d-flex gap-1">
+                <button class="btn btn-outline-secondary btn-sm btn-edit"
+                  data-bs-toggle="modal" data-bs-target="#editModal"
+                  data-id="{{ k.id }}" data-nama="{{ k.nama }}" data-deskripsi="{{ k.deskripsi }}">
+                  <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="btn btn-outline-danger btn-sm delete-btn" data-id="{{ k.id }}" data-nama="{{ k.nama }}">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Upload -->
+<div class="modal fade" id="uploadModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"><i class="fas fa-upload" style="color:var(--accent)"></i> Import Kategori</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <form enctype="multipart/form-data" method="post" action="/kategori-produk/upload">
+      <div class="modal-body">
+        <label class="form-label">Pilih file Excel</label>
+        <input type="file" class="form-control" name="fileUpload" accept=".xls,.xlsx" required>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Upload</button>
+      </div>
+    </form>
+  </div></div>
+</div>
+
+<!-- Modal Tambah -->
+<div class="modal fade" id="tambahModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"><i class="fas fa-plus" style="color:var(--success)"></i> Tambah Kategori</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <form method="POST" action="/kategori-produk/tambah">
+      <div class="modal-body">
+        <div class="mb-3"><label class="form-label">Nama <span style="color:var(--danger)">*</span></label><input type="text" class="form-control" name="nama" required placeholder="Nama kategori"></div>
+        <div class="mb-3"><label class="form-label">Deskripsi</label><textarea class="form-control" name="deskripsi" rows="2" placeholder="Deskripsi singkat (opsional)"></textarea></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
+      </div>
+    </form>
+  </div></div>
+</div>
+
+<!-- Modal Edit -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"><i class="fas fa-pencil-alt" style="color:var(--accent)"></i> Edit Kategori</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <form method="POST" action="/kategori-produk/update">
+      <div class="modal-body">
+        <input type="hidden" id="editId" name="id">
+        <div class="mb-3"><label class="form-label">Nama <span style="color:var(--danger)">*</span></label><input type="text" class="form-control" id="editNama" name="nama" required></div>
+        <div class="mb-3"><label class="form-label">Deskripsi</label><textarea class="form-control" id="editDeskripsi" name="deskripsi" rows="2"></textarea></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan Perubahan</button>
+      </div>
+    </form>
+  </div></div>
+</div>
+
+<!-- Modal Hapus -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm"><div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"><i class="fas fa-exclamation-triangle" style="color:var(--danger)"></i> Hapus Kategori</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body text-center" style="padding:1.5rem;">
+      <p style="color:var(--text-2);font-size:.875rem;">Yakin ingin menghapus</p>
+      <p style="font-weight:600;color:var(--danger);" id="deleteUsername"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+      <form id="deleteForm" method="POST" class="d-inline">
+        <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Hapus</button>
+      </form>
+    </div>
+  </div></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof simpleDatatables !== 'undefined') new simpleDatatables.DataTable('#datatablesSimple');
+
+  document.querySelectorAll('.btn-edit').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.getElementById('editId').value       = this.dataset.id;
+      document.getElementById('editNama').value     = this.dataset.nama;
+      document.getElementById('editDeskripsi').value = this.dataset.deskripsi;
+    });
+  });
+
+  document.querySelectorAll('.delete-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.getElementById('deleteUsername').textContent = this.dataset.nama;
+      document.getElementById('deleteForm').action = '/kategori-produk/delete/' + this.dataset.id;
+      new bootstrap.Modal(document.getElementById('deleteModal')).show();
+    });
+  });
+
+  document.getElementById('btnDownloadTemplate')?.addEventListener('click', () => {
+    window.location.href = '/kategori-produk/download-template';
+    if (typeof Toastify !== 'undefined') Toastify({
+      text:'Template berhasil diunduh!',duration:3000,gravity:'top',position:'right',
+      style:{background:'#059669',borderRadius:'8px',fontSize:'.8125rem',padding:'.5rem 1rem'}
+    }).showToast();
+  });
+});
+</script>
+{% endblock %}

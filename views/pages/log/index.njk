@@ -1,0 +1,55 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Log Aktivitas</h1>
+    <p class="page-subtitle">Rekam jejak aktivitas semua pengguna</p>
+  </div>
+  <button class="btn btn-outline-secondary btn-sm" id="btnDownloadData">
+    <i class="fas fa-file-excel"></i> Download Log
+  </button>
+</div>
+
+<div class="card">
+  <div class="card-header"><h6 class="card-header-title"><i class="fas fa-clipboard-list"></i> Semua Log</h6></div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="datatablesSimple" class="table">
+        <thead>
+          <tr><th>ID</th><th>User</th><th>Waktu</th><th>Aktivitas</th><th>IP</th><th>Device</th><th>Browser</th><th>Platform</th></tr>
+        </thead>
+        <tbody>
+          {% for log in logs %}
+          <tr>
+            <td style="color:var(--text-3);font-size:.75rem;">{{ log.id }}</td>
+            <td>{{ log.user_id }}</td>
+            <td style="font-size:.775rem;color:var(--text-2);white-space:nowrap;">{{ log.created_at }}</td>
+            <td><span class="badge bg-secondary">{{ log.activity }}</span></td>
+            <td style="font-family:'DM Mono',monospace;font-size:.75rem;">{{ log.ip_address }}</td>
+            <td style="font-size:.8rem;">{{ log.device_type }}</td>
+            <td style="font-size:.8rem;">{{ log.browser }}</td>
+            <td style="font-size:.8rem;">{{ log.platform }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof simpleDatatables !== 'undefined') new simpleDatatables.DataTable('#datatablesSimple');
+  document.getElementById('btnDownloadData')?.addEventListener('click', () => {
+    window.location.href = '/log/download';
+    if (typeof Toastify !== 'undefined') Toastify({
+      text:'Download berhasil! Cek folder download Anda.',duration:5000,gravity:'top',position:'right',
+      style:{background:'#059669',borderRadius:'8px',fontSize:'.8125rem',padding:'.5rem 1rem'}
+    }).showToast();
+  });
+});
+</script>
+{% endblock %}

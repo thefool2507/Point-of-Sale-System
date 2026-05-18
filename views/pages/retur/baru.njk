@@ -1,0 +1,245 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Retur Baru</h1>
+    <p class="page-subtitle">Buat retur untuk transaksi yang sudah selesai</p>
+  </div>
+  <a href="/retur/index" class="btn btn-outline-secondary btn-sm"><i class="fas fa-arrow-left"></i> Daftar Retur</a>
+</div>
+
+<div id="alert-container"></div>
+
+<form id="returForm">
+  <div class="row g-3 mb-3">
+    <div class="col-lg-8">
+      <div class="card mb-3">
+        <div class="card-header"><h6 class="card-header-title"><i class="fas fa-info-circle"></i> Informasi Retur</h6></div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Cari Transaksi</label>
+              <div style="position:relative;">
+                <input type="text" class="form-control" id="transaction-search"
+                       placeholder="ID transaksi atau nama pelanggan…" autocomplete="off">
+                <div id="search-results" style="position:absolute;top:100%;left:0;right:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-md);z-index:1000;max-height:200px;overflow-y:auto;display:none;"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Nama Pelanggan</label>
+              <input type="text" class="form-control" id="customer-name" readonly placeholder="—">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Tanggal Transaksi</label>
+              <input type="text" class="form-control" id="transaction-date" readonly placeholder="—">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Info Pelanggan</label>
+              <input type="text" class="form-control" id="customer-info" readonly placeholder="Email & Telepon">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Alasan Retur <span style="color:var(--danger)">*</span></label>
+              <textarea class="form-control" id="alasan" rows="2" placeholder="Wajib diisi…" required></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h6 class="card-header-title"><i class="fas fa-boxes"></i> Item yang Diretur</h6></div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr><th>Produk</th><th>SKU</th><th>Harga</th><th>Dibeli</th><th>Jml Retur</th><th>Subtotal</th></tr>
+            </thead>
+            <tbody id="items-tbody">
+              <tr>
+                <td colspan="6" style="text-align:center;color:var(--text-3);padding:2.5rem;font-size:.8rem;">
+                  <i class="fas fa-search" style="font-size:1.5rem;opacity:.35;display:block;margin-bottom:.5rem;"></i>
+                  Cari dan pilih transaksi untuk melihat item
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card" style="position:sticky;top:calc(var(--topnav-h) + 1rem);">
+        <div class="card-header"><h6 class="card-header-title"><i class="fas fa-calculator"></i> Total Pengembalian</h6></div>
+        <div class="card-body">
+          <div id="total-section" style="display:none;">
+            <div class="total-panel mb-3">
+              <div class="total-row grand">
+                <span>Total</span>
+                <span>Rp <span id="total-amount">0</span></span>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center;color:var(--text-3);font-size:.8rem;padding:1rem 0;" id="total-empty">
+            Pilih item untuk melihat total
+          </div>
+          <button type="button" class="btn btn-danger w-100 submit-btn" disabled onclick="returManager.submitRetur()">
+            <span id="submit-text"><i class="fas fa-undo-alt"></i> Proses Retur</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+class ReturManager {
+  constructor() {
+    this.selectedTransaction = null;
+    this.returItems = [];
+    this.totalAmount = 0;
+    this.init();
+  }
+
+  init() {
+    const searchInput = document.getElementById('transaction-search');
+    let timer;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => this.searchTransactions(searchInput.value), 300);
+    });
+    searchInput.addEventListener('blur', () => setTimeout(() => this.hideResults(), 200));
+  }
+
+  async searchTransactions(q) {
+    if (q.length < 2) { this.hideResults(); return; }
+    try {
+      const res = await fetch(`/api/transaksi/search?q=${encodeURIComponent(q)}`);
+      const data = await res.json();
+      this.showResults(data.transactions || []);
+    } catch { this.hideResults(); }
+  }
+
+  showResults(txs) {
+    const el = document.getElementById('search-results');
+    if (!txs.length) { el.style.display='none'; return; }
+    el.innerHTML = txs.map(t => `
+      <div onclick="returManager.selectTransaction(${t.id})"
+           style="padding:.625rem .875rem;cursor:pointer;border-bottom:1px solid var(--border);font-size:.8rem;transition:background .1s;"
+           onmouseover="this.style.background='var(--accent-light)'" onmouseout="this.style.background=''">
+        <div style="font-weight:600;">#${t.id} — ${t.customer_nama || 'Walk-in'}</div>
+        <div style="color:var(--text-3);font-size:.72rem;">${t.tanggal_transaksi || ''}</div>
+      </div>`).join('');
+    el.style.display='block';
+  }
+
+  hideResults() { document.getElementById('search-results').style.display='none'; }
+
+  async selectTransaction(id) {
+    try {
+      const res = await fetch(`/api/transaksi/${id}`);
+      const data = await res.json();
+      const t = data.transaction;
+      this.selectedTransaction = t;
+      document.getElementById('transaction-search').value = `#${t.id} — ${t.customer_nama || 'Walk-in'}`;
+      document.getElementById('customer-name').value = t.customer_nama || 'Walk-in';
+      document.getElementById('transaction-date').value = t.tanggal_transaksi || '—';
+      document.getElementById('customer-info').value = `${t.email || '—'} | ${t.telepon || '—'}`;
+      this.hideResults();
+      this.loadTransactionItems();
+    } catch { this.showAlert('Gagal memuat data transaksi', 'error'); }
+  }
+
+  loadTransactionItems() {
+    const tbody = document.getElementById('items-tbody');
+    this.returItems = []; this.updateTotal();
+    if (!this.selectedTransaction?.items?.length) {
+      tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-3);padding:2rem;font-size:.8rem;">Tidak ada item</td></tr>';
+      return;
+    }
+    tbody.innerHTML = this.selectedTransaction.items.map(item => `
+      <tr>
+        <td style="font-weight:500;font-size:.8rem;">${item.barang_nama}</td>
+        <td><code style="font-size:.72rem;">${item.SKU}</code></td>
+        <td style="font-size:.8rem;">Rp ${Number(item.harga_satuan).toLocaleString('id-ID')}</td>
+        <td style="font-size:.8rem;">${item.jumlah}</td>
+        <td>
+          <input type="number" class="form-control form-control-sm quantity-input"
+                 style="width:70px;"
+                 min="0" max="${item.jumlah}" value="0"
+                 data-item-id="${item.barang_id}" data-harga="${item.harga_satuan}"
+                 oninput="returManager.updateItemRetur(this)">
+        </td>
+        <td class="subtotal-${item.barang_id}" style="font-weight:500;font-size:.8rem;">Rp 0</td>
+      </tr>`).join('');
+  }
+
+  updateItemRetur(input) {
+    const itemId = parseInt(input.dataset.itemId);
+    const harga = parseInt(input.dataset.harga);
+    const qty = parseInt(input.value) || 0;
+    const sub = qty * harga;
+    const el = document.querySelector(`.subtotal-${itemId}`);
+    if (el) el.textContent = 'Rp ' + sub.toLocaleString('id-ID');
+    const idx = this.returItems.findIndex(i => i.barang_id === itemId);
+    if (qty > 0) {
+      const item = { barang_id: itemId, jumlah: qty, harga_satuan: harga, subtotal: sub };
+      idx >= 0 ? this.returItems[idx] = item : this.returItems.push(item);
+    } else if (idx >= 0) this.returItems.splice(idx, 1);
+    this.updateTotal();
+  }
+
+  updateTotal() {
+    this.totalAmount = this.returItems.reduce((s, i) => s + i.subtotal, 0);
+    document.getElementById('total-amount').textContent = this.totalAmount.toLocaleString('id-ID');
+    const show = this.totalAmount > 0;
+    document.getElementById('total-section').style.display = show ? 'block' : 'none';
+    document.getElementById('total-empty').style.display = show ? 'none' : 'block';
+    document.querySelector('.submit-btn').disabled = !show;
+  }
+
+  async submitRetur() {
+    if (!this.selectedTransaction) { this.showAlert('Pilih transaksi terlebih dahulu', 'warning'); return; }
+    if (!this.returItems.length) { this.showAlert('Pilih minimal satu item', 'warning'); return; }
+    const alasan = document.getElementById('alasan').value.trim();
+    if (!alasan) { this.showAlert('Alasan retur wajib diisi', 'warning'); return; }
+    const btn = document.querySelector('.submit-btn');
+    const txt = document.getElementById('submit-text');
+    btn.disabled = true; txt.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses…';
+    try {
+      const res = await fetch('/api/retur', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ transaction_id: this.selectedTransaction.id, customer_id: this.selectedTransaction.customer_id, alasan, items: this.returItems, total_pengembalian: this.totalAmount })
+      });
+      const data = await res.json();
+      if (data.success) {
+        this.showAlert('Retur berhasil dibuat!', 'success');
+        setTimeout(() => this.resetForm(), 2000);
+      } else this.showAlert(data.message || 'Gagal membuat retur', 'error');
+    } catch { this.showAlert('Terjadi kesalahan sistem', 'error'); }
+    txt.innerHTML = '<i class="fas fa-undo-alt"></i> Proses Retur';
+    this.updateTotal();
+  }
+
+  resetForm() {
+    document.getElementById('returForm').reset();
+    ['transaction-search','customer-name','transaction-date','customer-info'].forEach(id => { const el=document.getElementById(id); if(el) el.value=''; });
+    document.getElementById('items-tbody').innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-3);padding:2rem;font-size:.8rem;"><i class="fas fa-search" style="display:block;margin-bottom:.5rem;opacity:.35;"></i>Cari dan pilih transaksi</td></tr>';
+    this.selectedTransaction = null; this.returItems = []; this.totalAmount = 0;
+    this.updateTotal();
+  }
+
+  showAlert(msg, type) {
+    const icons = {success:'check-circle',error:'exclamation-circle',warning:'exclamation-triangle'};
+    const types = {error:'danger'};
+    const t = types[type] || type;
+    const c = document.getElementById('alert-container');
+    c.innerHTML = `<div class="alert alert-${t} mb-3"><i class="fas fa-${icons[type]||'info-circle'} flex-shrink-0"></i><span>${msg}</span></div>`;
+    setTimeout(() => c.innerHTML='', 5000);
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+}
+
+const returManager = new ReturManager();
+</script>
+{% endblock %}

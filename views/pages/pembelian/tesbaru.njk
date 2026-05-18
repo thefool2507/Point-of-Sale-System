@@ -1,0 +1,635 @@
+{% extends "layout/masterLayout.njk" %} {% block content %}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .form-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #56ab2f, #a8e6cf);
+            color: white;
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(86, 171, 47, 0.3);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 65, 108, 0.3);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+        }
+
+        .items-section {
+            margin-top: 30px;
+        }
+
+        .item-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr auto;
+            gap: 15px;
+            align-items: end;
+            margin-bottom: 15px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 2px solid #e9ecef;
+        }
+
+        .summary-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #667eea;
+        }
+
+        .recent-purchases {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .table th,
+        .table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-selesai {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-batal {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+
+        .alert-danger {
+            background: #f8d7da;
+            border-color: #f1b0b7;
+            color: #721c24;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #667eea;
+        }
+
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .item-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-shopping-cart"></i> {{ title }}</h1>
+            <p>Kelola pembelian barang dari supplier dengan mudah dan efisien</p>
+        </div>
+
+        <div id="alert-container"></div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2><i class="fas fa-plus-circle"></i> Tambah Pembelian Baru</h2>
+                
+                <form id="purchaseForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="supplier">Supplier</label>
+                            <select class="form-control" id="supplier" name="supplier_id" required>
+                                <option value="">Pilih Supplier</option>
+                                {% for supplier in suppliers %}
+                                <option value="{{ supplier.id }}">{{ supplier.nama }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user">Staff</label>
+                            <select class="form-control" id="user" name="user_id" required>
+                                <option value="">Pilih Staff</option>
+                                {% for user in users %}
+                                <option value="{{ user.id }}">{{ user.username }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="items-section">
+                        <h3><i class="fas fa-boxes"></i> Item Pembelian</h3>
+                        <div id="items-container">
+                            <div class="item-row">
+                                <div class="form-group">
+                                    <label>Barang</label>
+                                    <select class="form-control item-select" name="barang_id" required>
+                                        <option value="">Pilih Barang</option>
+                                        {% for barang in barangs %}
+                                        <option value="{{ barang.id }}" data-harga="{{ barang.harga_beli }}">{{ barang.nama }} ({{ barang.SKU }})</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Jumlah</label>
+                                    <input type="number" class="form-control item-qty" name="jumlah" min="1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Harga Satuan</label>
+                                    <input type="number" class="form-control item-price" name="harga_satuan" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Subtotal</label>
+                                    <input type="text" class="form-control item-subtotal" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>&nbsp;</label>
+                                    <button type="button" class="btn btn-danger remove-item">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn btn-primary" id="add-item">
+                            <i class="fas fa-plus"></i> Tambah Item
+                        </button>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-save"></i> Simpan Pembelian
+                        </button>
+                    </div>
+                </form>
+
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Menyimpan pembelian...
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <h3><i class="fas fa-calculator"></i> Ringkasan</h3>
+                <div class="summary-row">
+                    <span>Total Item:</span>
+                    <span id="total-items">0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Total Quantity:</span>
+                    <span id="total-qty">0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Total Harga:</span>
+                    <span id="total-price">Rp 0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-purchases">
+            <h2><i class="fas fa-history"></i> Pembelian Terbaru</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tanggal</th>
+                        <th>Supplier</th>
+                        <th>Staff</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for purchase in recentPurchases %}
+                    <tr>
+                        <td>#{{ purchase.id }}</td>
+                        <td>{{ purchase.tanggal_pembelian.toLocaleDateString() }}</td>
+                        <td>{{ purchase.supplier_nama or 'N/A' }}</td>
+                        <td>{{ purchase.username or 'N/A' }}</td>
+                        <td>Rp {{ purchase.total_harga.toLocaleString() }}</td>
+                        <td>
+                            <span class="status-badge status-{{ purchase.status }}">
+                                {{ purchase.status }}
+                            </span>
+                        </td>
+                        <td>
+                            {% if purchase.status == 'pending' %}
+                            <button class="btn btn-success btn-sm complete-btn" data-id="{{ purchase.id }}">
+                                <i class="fas fa-check"></i> Selesai
+                            </button>
+                            <button class="btn btn-danger btn-sm cancel-btn" data-id="{{ purchase.id }}">
+                                <i class="fas fa-times"></i> Batal
+                            </button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('purchaseForm');
+            const itemsContainer = document.getElementById('items-container');
+            const addItemBtn = document.getElementById('add-item');
+
+            // Add new item row
+            addItemBtn.addEventListener('click', function() {
+                const itemRow = createItemRow();
+                itemsContainer.appendChild(itemRow);
+                updateSummary();
+            });
+
+            // Handle form submission
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const items = [];
+                
+                // Collect items data
+                const itemRows = document.querySelectorAll('.item-row');
+                itemRows.forEach(row => {
+                    const barangId = row.querySelector('.item-select').value;
+                    const jumlah = row.querySelector('.item-qty').value;
+                    const hargaSatuan = row.querySelector('.item-price').value;
+                    
+                    if (barangId && jumlah && hargaSatuan) {
+                        items.push({
+                            barang_id: barangId,
+                            jumlah: parseInt(jumlah),
+                            harga_satuan: parseFloat(hargaSatuan)
+                        });
+                    }
+                });
+
+                if (items.length === 0) {
+                    showAlert('Mohon tambahkan minimal satu item', 'danger');
+                    return;
+                }
+
+                const data = {
+                    supplier_id: formData.get('supplier_id'),
+                    user_id: formData.get('user_id'),
+                    items: items
+                };
+
+                try {
+                    document.querySelector('.loading').style.display = 'block';
+                    
+                    const response = await fetch('/api/pembelian', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        showAlert('Pembelian berhasil disimpan!', 'success');
+                        form.reset();
+                        updateSummary();
+                        setTimeout(() => {
+                            location.reload();
+                        }, 1500);
+                    } else {
+                        showAlert('Gagal menyimpan pembelian', 'danger');
+                    }
+                } catch (error) {
+                    showAlert('Terjadi kesalahan sistem', 'danger');
+                } finally {
+                    document.querySelector('.loading').style.display = 'none';
+                }
+            });
+
+            // Handle status updates
+            document.querySelectorAll('.complete-btn, .cancel-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const id = this.dataset.id;
+                    const status = this.classList.contains('complete-btn') ? 'selesai' : 'batal';
+                    
+                    try {
+                        const response = await fetch(`/api/pembelian/${id}/status`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ status })
+                        });
+
+                        if (response.ok) {
+                            showAlert(`Status berhasil diubah menjadi ${status}`, 'success');
+                            setTimeout(() => {
+                                location.reload();
+                            }, 1000);
+                        }
+                    } catch (error) {
+                        showAlert('Gagal mengubah status', 'danger');
+                    }
+                });
+            });
+
+            // Initialize event listeners for existing item row
+            initializeItemRow(document.querySelector('.item-row'));
+            updateSummary();
+
+            function createItemRow() {
+                const template = document.querySelector('.item-row').cloneNode(true);
+                
+                // Clear values
+                template.querySelectorAll('input, select').forEach(input => {
+                    input.value = '';
+                });
+                
+                initializeItemRow(template);
+                return template;
+            }
+
+            function initializeItemRow(row) {
+                const selectEl = row.querySelector('.item-select');
+                const qtyEl = row.querySelector('.item-qty');
+                const priceEl = row.querySelector('.item-price');
+                const subtotalEl = row.querySelector('.item-subtotal');
+                const removeBtn = row.querySelector('.remove-item');
+
+                // Auto-fill price when item selected
+                selectEl.addEventListener('change', function() {
+                    const selectedOption = this.options[this.selectedIndex];
+                    if (selectedOption.dataset.harga) {
+                        priceEl.value = selectedOption.dataset.harga;
+                        updateSubtotal();
+                    }
+                });
+
+                // Update subtotal when quantity or price changes
+                qtyEl.addEventListener('input', updateSubtotal);
+                priceEl.addEventListener('input', updateSubtotal);
+
+                // Remove item row
+                removeBtn.addEventListener('click', function() {
+                    if (document.querySelectorAll('.item-row').length > 1) {
+                        row.remove();
+                        updateSummary();
+                    } else {
+                        showAlert('Minimal harus ada satu item', 'warning');
+                    }
+                });
+
+                function updateSubtotal() {
+                    const qty = parseFloat(qtyEl.value) || 0;
+                    const price = parseFloat(priceEl.value) || 0;
+                    const subtotal = qty * price;
+                    subtotalEl.value = `Rp ${subtotal.toLocaleString()}`;
+                    updateSummary();
+                }
+            }
+
+            function updateSummary() {
+                let totalItems = 0;
+                let totalQty = 0;
+                let totalPrice = 0;
+
+                document.querySelectorAll('.item-row').forEach(row => {
+                    const qty = parseFloat(row.querySelector('.item-qty').value) || 0;
+                    const price = parseFloat(row.querySelector('.item-price').value) || 0;
+                    
+                    if (qty > 0 && price > 0) {
+                        totalItems++;
+                        totalQty += qty;
+                        totalPrice += qty * price;
+                    }
+                });
+
+                document.getElementById('total-items').textContent = totalItems;
+                document.getElementById('total-qty').textContent = totalQty;
+                document.getElementById('total-price').textContent = `Rp ${totalPrice.toLocaleString()}`;
+            }
+
+            function showAlert(message, type) {
+                const alertContainer = document.getElementById('alert-container');
+                const alert = document.createElement('div');
+                alert.className = `alert alert-${type}`;
+                alert.innerHTML = `
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'danger' ? 'exclamation-circle' : 'info-circle'}"></i>
+                    ${message}
+                `;
+                
+                alertContainer.innerHTML = '';
+                alertContainer.appendChild(alert);
+                
+                setTimeout(() => {
+                    alert.remove();
+                }, 5000);
+            }
+        });
+    </script>
+{% endblock %}

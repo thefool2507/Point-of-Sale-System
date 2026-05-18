@@ -1,0 +1,105 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Daftar Transaksi</h1>
+    <p class="page-subtitle">Riwayat dan status semua transaksi penjualan</p>
+  </div>
+  <div class="d-flex gap-2">
+    <a href="/transaksi/pos" class="btn btn-success btn-sm">
+      <i class="fas fa-cash-register"></i> Kasir
+    </a>
+    <a href="/transaksi/laporan_penjualan" class="btn btn-outline-secondary btn-sm">
+      <i class="fas fa-chart-bar"></i> Laporan
+    </a>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="row g-3 mb-4">
+  <div class="col-sm-4">
+    <div class="card stat-card stat-accent-blue">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-receipt"></i></div>
+        <div class="stat-label">Total Transaksi</div>
+        <div class="stat-value mt-1" style="font-size:1.4rem;">{{ transaksis.length }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card stat-card stat-accent-cyan">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-label">Pelanggan Aktif</div>
+        <div class="stat-value mt-1" style="font-size:1.4rem;">{{ customers.length }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card stat-card stat-accent-green">
+      <div class="card-body" style="padding:.875rem 1rem;">
+        <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="stat-label">Hari Ini</div>
+        <div class="stat-value mt-1" style="font-size:1.4rem;" id="todayCount">—</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h6 class="card-header-title"><i class="fas fa-list-ul"></i> Semua Transaksi</h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="datatablesSimple" class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Pelanggan</th>
+            <th>Kasir</th>
+            <th>Tanggal</th>
+            <th>Total</th>
+            <th>Metode</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for t in transaksis %}
+          <tr>
+            <td><code style="font-size:.75rem;">#{{ t.id }}</code></td>
+            <td>{{ t.customer_nama or 'Walk-in' }}</td>
+            <td>{{ t.user_username or '—' }}</td>
+            <td style="color:var(--text-3);font-size:.775rem;">{{ t.created_at }}</td>
+            <td style="font-weight:600;">Rp {{ t.total_harga | replace(',', '.') }}</td>
+            <td><span class="badge bg-secondary">{{ t.metode_pembayaran or '—' }}</span></td>
+            <td>
+              {% if t.status == 'selesai' or t.status == 'completed' %}
+              <span class="badge bg-success">Selesai</span>
+              {% elif t.status == 'pending' %}
+              <span class="badge bg-warning">Pending</span>
+              {% elif t.status == 'batal' or t.status == 'cancelled' %}
+              <span class="badge bg-danger">Batal</span>
+              {% else %}
+              <span class="badge bg-secondary">{{ t.status or '—' }}</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof simpleDatatables !== 'undefined') {
+    new simpleDatatables.DataTable('#datatablesSimple');
+  }
+});
+</script>
+{% endblock %}

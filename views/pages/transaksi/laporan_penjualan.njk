@@ -1,0 +1,386 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Laporan Penjualan</h1>
+    <p class="page-subtitle">Analisis performa penjualan dan tren bisnis</p>
+  </div>
+  <div class="d-flex gap-2">
+    <button class="btn btn-outline-secondary btn-sm" id="exportExcel">
+      <i class="fas fa-file-excel"></i> Excel
+    </button>
+    <button class="btn btn-outline-secondary btn-sm" id="refreshData">
+      <i class="fas fa-sync-alt"></i> Refresh
+    </button>
+  </div>
+</div>
+
+<!-- Filter Card -->
+<div class="card mb-4">
+  <div class="card-header">
+    <h6 class="card-header-title"><i class="fas fa-filter"></i> Filter</h6>
+    <button class="btn btn-ghost btn-sm" id="resetFilters"><i class="fas fa-undo me-1"></i>Reset</button>
+  </div>
+  <div class="card-body">
+    <div id="error-message" class="alert alert-danger" style="display:none;">
+      <i class="fas fa-exclamation-circle flex-shrink-0"></i>
+      <span id="error-text"></span>
+    </div>
+    <div class="row g-3 align-items-end">
+      <div class="col-md-3">
+        <label class="form-label">Tanggal Mulai</label>
+        <input type="date" class="form-control" id="tanggal_mulai">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Tanggal Selesai</label>
+        <input type="date" class="form-control" id="tanggal_selesai">
+      </div>
+      <div class="col-md-2">
+        <label class="form-label">Status</label>
+        <select class="form-select" id="status_filter">
+          <option value="">Semua Status</option>
+          <option value="selesai">Selesai</option>
+          <option value="pending">Pending</option>
+          <option value="batal">Batal</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label class="form-label">Metode Bayar</label>
+        <select class="form-select" id="payment_filter">
+          <option value="">Semua Metode</option>
+          <option value="tunai">Tunai</option>
+          <option value="kartu_kredit">Kartu Kredit</option>
+          <option value="kartu_debit">Kartu Debit</option>
+          <option value="transfer">Transfer</option>
+          <option value="e-wallet">E-Wallet</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100" id="applyFilters">
+          <i class="fas fa-search"></i> Terapkan
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KPI Cards -->
+<div class="row g-3 mb-4">
+  <div class="col-xl-3 col-sm-6">
+    <div class="card stat-card stat-accent-green">
+      <div class="card-body" style="padding:1rem 1.125rem;">
+        <div class="stat-icon"><i class="fas fa-money-bill-wave"></i></div>
+        <div class="stat-label">Total Penjualan</div>
+        <div class="stat-value mt-1" id="total-penjualan" style="font-size:1.3rem;">Rp 0</div>
+        <div class="stat-sub" id="penjualan-change">—</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6">
+    <div class="card stat-card stat-accent-blue">
+      <div class="card-body" style="padding:1rem 1.125rem;">
+        <div class="stat-icon"><i class="fas fa-receipt"></i></div>
+        <div class="stat-label">Total Transaksi</div>
+        <div class="stat-value mt-1" id="total-transaksi" style="font-size:1.3rem;">0</div>
+        <div class="stat-sub" id="transaksi-change">—</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6">
+    <div class="card stat-card stat-accent-amber">
+      <div class="card-body" style="padding:1rem 1.125rem;">
+        <div class="stat-icon"><i class="fas fa-box"></i></div>
+        <div class="stat-label">Produk Terjual</div>
+        <div class="stat-value mt-1" id="produk-terjual" style="font-size:1.3rem;">0</div>
+        <div class="stat-sub" id="produk-change">—</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-sm-6">
+    <div class="card stat-card stat-accent-cyan">
+      <div class="card-body" style="padding:1rem 1.125rem;">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-label">Pelanggan Aktif</div>
+        <div class="stat-value mt-1" id="pelanggan-aktif" style="font-size:1.3rem;">0</div>
+        <div class="stat-sub" id="pelanggan-change">—</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Charts + Top Products -->
+<div class="row g-3 mb-4">
+  <div class="col-xl-8">
+    <div class="card">
+      <div class="card-header">
+        <h6 class="card-header-title"><i class="fas fa-chart-area"></i> Tren Penjualan</h6>
+        <div class="d-flex gap-1">
+          <button class="btn btn-sm chart-btn active" data-period="7" style="padding:.25rem .625rem;font-size:.75rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--accent);color:#fff;cursor:pointer;">7H</button>
+          <button class="btn btn-sm chart-btn" data-period="30" style="padding:.25rem .625rem;font-size:.75rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);color:var(--text-2);cursor:pointer;">30H</button>
+          <button class="btn btn-sm chart-btn" data-period="90" style="padding:.25rem .625rem;font-size:.75rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);color:var(--text-2);cursor:pointer;">90H</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div style="position:relative;height:320px;">
+          <canvas id="salesChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4">
+    <div class="card mb-3">
+      <div class="card-header">
+        <h6 class="card-header-title"><i class="fas fa-trophy"></i> Produk Terlaris</h6>
+      </div>
+      <div class="card-body" style="padding:.75rem 1.125rem;">
+        <ul class="list-unstyled mb-0" id="top-products-list">
+          <li style="text-align:center;padding:1.5rem;color:var(--text-3);font-size:.8rem;">Memuat data…</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h6 class="card-header-title"><i class="fas fa-credit-card"></i> Metode Pembayaran</h6>
+      </div>
+      <div class="card-body">
+        <div style="position:relative;height:180px;">
+          <canvas id="paymentChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Transactions Table -->
+<div class="card">
+  <div class="card-header">
+    <h6 class="card-header-title"><i class="fas fa-list-ul"></i> Detail Transaksi</h6>
+  </div>
+  <div id="loading-indicator" style="display:none;" class="card-body text-center" style="padding:2rem;">
+    <div class="spinner-border text-primary" role="status" style="width:1.5rem;height:1.5rem;"></div>
+    <div class="mt-2" style="font-size:.8rem;color:var(--text-3);">Memuat data…</div>
+  </div>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tanggal</th>
+          <th>Pelanggan</th>
+          <th>Total</th>
+          <th>Metode</th>
+          <th>Status</th>
+          <th>Kasir</th>
+        </tr>
+      </thead>
+      <tbody id="transactions-table-body">
+        <tr><td colspan="7" style="text-align:center;color:var(--text-3);padding:2rem;font-size:.8rem;">Memuat data…</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer">
+    <div id="pagination" class="d-flex justify-content-center gap-1"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let salesChart = null, paymentChart = null, currentData = null;
+let currentPage = 1; const itemsPerPage = 15;
+
+const fmt = n => new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',minimumFractionDigits:0}).format(n);
+const fmtDate = d => new Date(d).toLocaleString('id-ID',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+
+function initializeDateFilters() {
+  const today = new Date(), start = new Date(); start.setDate(today.getDate() - 30);
+  document.getElementById('tanggal_mulai').value = start.toISOString().split('T')[0];
+  document.getElementById('tanggal_selesai').value = today.toISOString().split('T')[0];
+}
+
+async function loadAnalyticsData() {
+  showLoading(true);
+  const params = new URLSearchParams({
+    tanggal_mulai: document.getElementById('tanggal_mulai').value,
+    tanggal_selesai: document.getElementById('tanggal_selesai').value,
+    status_filter: document.getElementById('status_filter').value,
+    payment_filter: document.getElementById('payment_filter').value
+  });
+  try {
+    const res = await fetch(`/transaksi/analytics?${params}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const result = await res.json();
+    if (!result.success) throw new Error(result.message || 'Gagal memuat data');
+    const data = result.data;
+    currentData = data; currentPage = 1;
+    updateStats(data.summary);
+    updateSalesChart(data.daily_sales);
+    updatePaymentChart(data.payment_methods);
+    updateTopProducts(data.top_products);
+    updateTransactionsTable(data.detailed_transactions);
+    document.getElementById('error-message').style.display = 'none';
+  } catch(e) { showError('Gagal memuat data laporan: ' + e.message); }
+  showLoading(false);
+}
+
+function updateStats(s) {
+  if (!s) return;
+  document.getElementById('total-penjualan').textContent = fmt(s.total_penjualan||0);
+  document.getElementById('total-transaksi').textContent = s.total_transaksi||0;
+  document.getElementById('produk-terjual').textContent = s.produk_terjual||0;
+  document.getElementById('pelanggan-aktif').textContent = s.pelanggan_aktif||0;
+  const changes = s.changes || {};
+  const setChange = (id, val) => {
+    const el = document.getElementById(id); if (!el) return;
+    const v = parseFloat(val||0), pos = v >= 0;
+    el.textContent = (pos ? '↑ +' : '↓ ') + Math.abs(v).toFixed(1) + '%';
+    el.style.color = pos ? 'var(--success)' : 'var(--danger)';
+  };
+  setChange('penjualan-change', changes.penjualan_change);
+  setChange('transaksi-change', changes.transaksi_change);
+  setChange('produk-change',    changes.produk_change);
+  setChange('pelanggan-change', changes.pelanggan_change);
+}
+
+function updateSalesChart(dailySales) {
+  if (!dailySales || !dailySales.length) return;
+  const ctx = document.getElementById('salesChart').getContext('2d');
+  if (salesChart) salesChart.destroy();
+  salesChart = new Chart(ctx, {
+    type:'line',
+    data: {
+      labels: dailySales.map(i => new Date(i.tanggal).toLocaleDateString('id-ID',{weekday:'short',day:'numeric'})),
+      datasets: [{
+        label:'Penjualan Harian',
+        data: dailySales.map(i => i.total_harian),
+        borderColor:'#2563EB', backgroundColor:'rgba(37,99,235,.07)',
+        borderWidth:2, pointRadius:3, tension:.4, fill:true
+      }]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>fmt(c.raw||0)}}},
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:11},color:'#94A3B8'}},
+        y:{grid:{color:'#F1F5F9'},ticks:{font:{size:11},color:'#94A3B8',callback:v=>fmt(v)}}
+      }
+    }
+  });
+}
+
+function updatePaymentChart(methods) {
+  const ctx = document.getElementById('paymentChart').getContext('2d');
+  if (paymentChart) paymentChart.destroy();
+  paymentChart = new Chart(ctx, {
+    type:'doughnut',
+    data: {
+      labels:(methods||[]).map(i=>i.metode_pembayaran||i.payment_method),
+      datasets:[{data:(methods||[]).map(i=>i.jumlah_transaksi),
+        backgroundColor:['#2563EB','#059669','#D97706','#0891B2','#7C3AED'],
+        borderWidth:0}]
+    },
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{font:{size:11},padding:10}}}}
+  });
+}
+
+function updateTopProducts(products) {
+  const ul = document.getElementById('top-products-list');
+  if (!products||!products.length){ul.innerHTML='<li style="text-align:center;color:var(--text-3);font-size:.8rem;padding:.75rem">Tidak ada data</li>';return;}
+  ul.innerHTML = products.slice(0,5).map((p,i)=>`
+    <li style="display:flex;align-items:center;gap:.625rem;padding:.5rem 0;border-bottom:1px solid var(--border);">
+      <span style="width:20px;height:20px;border-radius:50%;background:var(--accent-light);color:var(--accent);font-size:.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">${i+1}</span>
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:.8rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${p.nama_barang||p.product_name||'—'}</div>
+        <div style="font-size:.72rem;color:var(--text-3);">${p.total_terjual||p.total_qty||0} unit</div>
+      </div>
+      <span style="font-size:.78rem;font-weight:600;">${fmt(p.total_pendapatan||p.total_sales||0)}</span>
+    </li>`).join('');
+}
+
+function updateTransactionsTable(transactions) {
+  const tbody = document.getElementById('transactions-table-body');
+  if (!transactions||!transactions.length){tbody.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--text-3);padding:2rem;font-size:.8rem;">Tidak ada data transaksi</td></tr>';updatePagination(0);return;}
+  const s=(currentPage-1)*itemsPerPage, e=s+itemsPerPage, paged=transactions.slice(s,e);
+  const statusBadge = st => {
+    if (st==='selesai'||st==='completed') return '<span class="badge bg-success">Selesai</span>';
+    if (st==='pending') return '<span class="badge bg-warning">Pending</span>';
+    if (st==='batal') return '<span class="badge bg-danger">Batal</span>';
+    return `<span class="badge bg-secondary">${st||'—'}</span>`;
+  };
+  tbody.innerHTML = paged.map(t=>`
+    <tr>
+      <td><code style="font-size:.75rem;">#${String(t.id||0).padStart(3,'0')}</code></td>
+      <td style="font-size:.775rem;color:var(--text-2);">${fmtDate(t.tanggal_transaksi||t.created_at)}</td>
+      <td>${t.customer_name||'Walk-in'}</td>
+      <td style="font-weight:600;">${fmt(t.total_harga||0)}</td>
+      <td><span class="badge bg-secondary">${t.payment_method||t.metode_pembayaran||'—'}</span></td>
+      <td>${statusBadge(t.status)}</td>
+      <td>${t.kasir_name||t.user_username||'—'}</td>
+    </tr>`).join('');
+  updatePagination(transactions.length);
+}
+
+function updatePagination(total) {
+  const pages = Math.ceil(total/itemsPerPage), el = document.getElementById('pagination');
+  el.innerHTML='';
+  if(pages<=1) return;
+  const btn = (text,page,disabled,active) => {
+    const b=document.createElement('button');
+    b.innerHTML=text; b.disabled=disabled;
+    b.style.cssText=`padding:.3rem .6rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:${active?'var(--accent)':'var(--surface)'};color:${active?'#fff':'var(--text-2)'};font-size:.775rem;cursor:pointer;`;
+    if(!disabled) b.onclick=()=>{currentPage=page;if(currentData)updateTransactionsTable(currentData.detailed_transactions);};
+    return b;
+  };
+  el.appendChild(btn('←',currentPage-1,currentPage===1,false));
+  for(let i=1;i<=Math.min(pages,7);i++) el.appendChild(btn(i,i,false,i===currentPage));
+  el.appendChild(btn('→',currentPage+1,currentPage===pages,false));
+}
+
+function applyFilters() {
+  const s=document.getElementById('tanggal_mulai').value, e=document.getElementById('tanggal_selesai').value;
+  if(!s||!e){showError('Tanggal mulai dan selesai harus diisi');return;}
+  if(new Date(s)>new Date(e)){showError('Tanggal mulai tidak boleh lebih besar dari selesai');return;}
+  loadAnalyticsData();
+}
+function resetFilters() {
+  document.getElementById('status_filter').value=''; document.getElementById('payment_filter').value='';
+  initializeDateFilters();
+  document.querySelectorAll('.chart-btn').forEach(b=>b.style.background=b.style.color='');
+  document.querySelector('.chart-btn[data-period="30"]')?.click();
+  loadAnalyticsData();
+}
+function changePeriod(days) {
+  const today=new Date(), start=new Date(today.getTime()-(days-1)*86400000);
+  document.getElementById('tanggal_mulai').value=start.toISOString().split('T')[0];
+  document.getElementById('tanggal_selesai').value=today.toISOString().split('T')[0];
+  loadAnalyticsData();
+}
+function showLoading(show) { document.getElementById('loading-indicator').style.display=show?'block':'none'; }
+function showError(msg) {
+  const e=document.getElementById('error-message'),t=document.getElementById('error-text');
+  if(e&&t){t.textContent=msg;e.style.display='flex';setTimeout(()=>e.style.display='none',5000);}
+}
+function exportToExcel() {
+  const p=new URLSearchParams({tanggal_mulai:document.getElementById('tanggal_mulai').value,tanggal_selesai:document.getElementById('tanggal_selesai').value,status_filter:document.getElementById('status_filter').value,payment_filter:document.getElementById('payment_filter').value});
+  window.location.href=`/transaksi/export?${p}`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initializeDateFilters(); loadAnalyticsData();
+  document.getElementById('applyFilters').addEventListener('click',e=>{e.preventDefault();applyFilters();});
+  document.getElementById('resetFilters').addEventListener('click',e=>{e.preventDefault();resetFilters();});
+  document.getElementById('refreshData').addEventListener('click',e=>{e.preventDefault();loadAnalyticsData();});
+  document.getElementById('exportExcel').addEventListener('click',e=>{e.preventDefault();exportToExcel();});
+  document.querySelectorAll('.chart-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.chart-btn').forEach(b=>{b.style.background='var(--surface)';b.style.color='var(--text-2)';});
+      this.style.background='var(--accent)'; this.style.color='#fff';
+      changePeriod(parseInt(this.dataset.period));
+    });
+  });
+});
+</script>
+{% endblock %}

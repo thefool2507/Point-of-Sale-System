@@ -1,0 +1,50 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Daftar Pembelian</h1>
+    <p class="page-subtitle">Riwayat semua transaksi pembelian dari supplier</p>
+  </div>
+  <div class="d-flex gap-2">
+    <a href="/pembelian/download" class="btn btn-outline-secondary btn-sm"><i class="fas fa-file-excel"></i> Export</a>
+    <a href="/pembelian/baru" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Pembelian Baru</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h6 class="card-header-title"><i class="fas fa-truck"></i> Semua Pembelian</h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="datatablesSimple" class="table">
+        <thead>
+          <tr><th>ID</th><th>Supplier</th><th>Staff</th><th>Tanggal</th><th>Total</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          {% for p in pembelianList %}
+          <tr>
+            <td><code style="font-size:.75rem;">#{{ p.id }}</code></td>
+            <td>{{ p.supplier_nama or '—' }}</td>
+            <td>{{ p.user_username or '—' }}</td>
+            <td style="font-size:.775rem;color:var(--text-2);">{{ p.tanggal_pembelian }}</td>
+            <td style="font-weight:500;">{{ p.total_harga }}</td>
+            <td>
+              {% if p.status == 'selesai' %}<span class="badge bg-success">Selesai</span>
+              {% elif p.status == 'pending' %}<span class="badge bg-warning">Pending</span>
+              {% elif p.status == 'batal' %}<span class="badge bg-danger">Batal</span>
+              {% else %}<span class="badge bg-secondary">{{ p.status or '—' }}</span>{% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>document.addEventListener('DOMContentLoaded',()=>{if(typeof simpleDatatables!=='undefined')new simpleDatatables.DataTable('#datatablesSimple');});</script>
+{% endblock %}

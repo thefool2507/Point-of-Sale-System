@@ -1,0 +1,254 @@
+{% extends "layout/masterLayout.njk" %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Pembelian Baru</h1>
+    <p class="page-subtitle">Catat pembelian barang dari supplier</p>
+  </div>
+  <a href="/pembelian/index" class="btn btn-outline-secondary btn-sm">
+    <i class="fas fa-list-ul"></i> Riwayat Pembelian
+  </a>
+</div>
+
+<div id="alert-container"></div>
+
+<div class="row g-3 mb-4">
+  <!-- Form -->
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        <h6 class="card-header-title"><i class="fas fa-plus-circle"></i> Detail Pembelian</h6>
+      </div>
+      <div class="card-body">
+        <form id="purchaseForm">
+          <div class="mb-3">
+            <label class="form-label">Supplier <span style="color:var(--danger)">*</span></label>
+            <select class="form-select" id="supplier" name="supplier_id" required>
+              <option value="">Pilih supplier…</option>
+              {% for supplier in suppliers %}
+              <option value="{{ supplier.id }}">{{ supplier.nama }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <label class="form-label mb-0">Item Pembelian</label>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="add-item">
+              <i class="fas fa-plus"></i> Tambah Item
+            </button>
+          </div>
+
+          <div id="items-container">
+            <div class="item-row" style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:.875rem;margin-bottom:.5rem;">
+              <div class="row g-2 align-items-end">
+                <div class="col-md-5">
+                  <label class="form-label">Barang</label>
+                  <select class="form-select item-select" name="barang_id" required>
+                    <option value="">Pilih barang…</option>
+                    {% for barang in barangs %}
+                    <option value="{{ barang.id }}" data-harga="{{ barang.harga_beli }}">{{ barang.nama }} ({{ barang.SKU }})</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label">Jumlah</label>
+                  <input type="number" class="form-control item-qty" name="jumlah" min="1" placeholder="0" required>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label">Harga Satuan</label>
+                  <div class="input-group">
+                    <span class="input-group-text">Rp</span>
+                    <input type="number" class="form-control item-price" name="harga_satuan" step="0.01" placeholder="0">
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label">Subtotal</label>
+                  <input type="text" class="form-control item-subtotal" readonly placeholder="Rp 0" style="background:var(--surface);font-weight:500;">
+                </div>
+              </div>
+              <div class="text-end mt-2">
+                <button type="button" class="btn btn-outline-danger btn-sm remove-item"><i class="fas fa-times"></i> Hapus</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-success btn-lg">
+              <i class="fas fa-save"></i> Simpan Pembelian
+            </button>
+          </div>
+        </form>
+        <div id="loadingPurchase" style="display:none;text-align:center;padding:1rem;color:var(--text-3);font-size:.8rem;">
+          <i class="fas fa-spinner fa-spin me-2"></i>Menyimpan pembelian…
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="col-lg-4">
+    <div class="card" style="position:sticky;top:calc(var(--topnav-h) + 1rem);">
+      <div class="card-header">
+        <h6 class="card-header-title"><i class="fas fa-calculator"></i> Ringkasan</h6>
+      </div>
+      <div class="card-body">
+        <div class="total-panel">
+          <div class="total-row">
+            <span>Total Item Jenis</span>
+            <span id="total-items" style="font-weight:600;">0</span>
+          </div>
+          <div class="total-row">
+            <span>Total Quantity</span>
+            <span id="total-qty" style="font-weight:600;">0</span>
+          </div>
+          <div class="total-row grand">
+            <span>Total Harga</span>
+            <span id="total-price">Rp 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Recent Purchases -->
+<div class="card">
+  <div class="card-header">
+    <h6 class="card-header-title"><i class="fas fa-history"></i> Pembelian Terbaru</h6>
+    <a href="/pembelian/index" class="btn btn-ghost btn-sm" style="font-size:.775rem;">Lihat Semua <i class="fas fa-arrow-right ms-1"></i></a>
+  </div>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr><th>ID</th><th>Tanggal</th><th>Supplier</th><th>Staff</th><th>Total</th><th>Status</th><th>Aksi</th></tr>
+      </thead>
+      <tbody>
+        {% for p in recentPurchases %}
+        <tr>
+          <td><code style="font-size:.75rem;">#{{ p.id }}</code></td>
+          <td style="font-size:.775rem;color:var(--text-2);">{{ p.tanggal_pembelian }}</td>
+          <td>{{ p.supplier_nama or '—' }}</td>
+          <td>{{ p.username or '—' }}</td>
+          <td style="font-weight:500;">Rp {{ p.total_harga.toLocaleString() }}</td>
+          <td>
+            {% if p.status == 'selesai' %}<span class="badge bg-success">Selesai</span>
+            {% elif p.status == 'pending' %}<span class="badge bg-warning">Pending</span>
+            {% elif p.status == 'batal' %}<span class="badge bg-danger">Batal</span>
+            {% else %}<span class="badge bg-secondary">{{ p.status }}</span>{% endif %}
+          </td>
+          <td>
+            {% if p.status == 'pending' %}
+            <div class="d-flex gap-1">
+              <button class="btn btn-success btn-sm complete-btn" data-id="{{ p.id }}"><i class="fas fa-check"></i></button>
+              <button class="btn btn-outline-danger btn-sm cancel-btn" data-id="{{ p.id }}"><i class="fas fa-times"></i></button>
+            </div>
+            {% else %}—{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const fmt = n => 'Rp ' + Number(n||0).toLocaleString('id-ID');
+
+function showAlert(msg, type) {
+  const c = document.getElementById('alert-container');
+  const icons = {success:'check-circle', danger:'exclamation-circle', warning:'info-circle'};
+  c.innerHTML = `<div class="alert alert-${type} mb-3"><i class="fas fa-${icons[type]||'info-circle'} flex-shrink-0"></i><span>${msg}</span></div>`;
+  setTimeout(() => c.innerHTML = '', 5000);
+}
+
+function updateSummary() {
+  let items=0, qty=0, price=0;
+  document.querySelectorAll('.item-row').forEach(row => {
+    const q = parseFloat(row.querySelector('.item-qty').value)||0;
+    const p = parseFloat(row.querySelector('.item-price').value)||0;
+    if (q>0 && p>0) { items++; qty+=q; price+=q*p; }
+  });
+  document.getElementById('total-items').textContent = items;
+  document.getElementById('total-qty').textContent = qty;
+  document.getElementById('total-price').textContent = fmt(price);
+}
+
+function initItemRow(row) {
+  const sel = row.querySelector('.item-select');
+  const qty = row.querySelector('.item-qty');
+  const price = row.querySelector('.item-price');
+  const sub = row.querySelector('.item-subtotal');
+  const rm = row.querySelector('.remove-item');
+
+  const recalc = () => {
+    const q = parseFloat(qty.value)||0, p = parseFloat(price.value)||0;
+    sub.value = fmt(q*p); updateSummary();
+  };
+
+  sel.addEventListener('change', function() {
+    const opt = this.options[this.selectedIndex];
+    if (opt.dataset.harga) { price.value = opt.dataset.harga; recalc(); }
+  });
+  qty.addEventListener('input', recalc);
+  price.addEventListener('input', recalc);
+  rm.addEventListener('click', function() {
+    if (document.querySelectorAll('.item-row').length > 1) { row.remove(); updateSummary(); }
+    else showAlert('Minimal satu item harus ada', 'warning');
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  initItemRow(document.querySelector('.item-row'));
+  updateSummary();
+
+  document.getElementById('add-item').addEventListener('click', function() {
+    const tmpl = document.querySelector('.item-row').cloneNode(true);
+    tmpl.querySelectorAll('input,select').forEach(el => el.value = '');
+    document.getElementById('items-container').appendChild(tmpl);
+    initItemRow(tmpl);
+  });
+
+  document.getElementById('purchaseForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const items = [];
+    document.querySelectorAll('.item-row').forEach(row => {
+      const bid = row.querySelector('.item-select').value;
+      const q = row.querySelector('.item-qty').value;
+      const p = row.querySelector('.item-price').value;
+      if (bid && q && p) items.push({ barang_id: bid, jumlah: parseInt(q), harga_satuan: parseFloat(p) });
+    });
+    if (!items.length) { showAlert('Tambahkan minimal satu item', 'danger'); return; }
+    document.getElementById('loadingPurchase').style.display = 'block';
+    try {
+      const res = await fetch('/api/pembelian', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ supplier_id: document.getElementById('supplier').value, items })
+      });
+      const data = await res.json();
+      if (data.success) {
+        showAlert('Pembelian berhasil disimpan!', 'success');
+        this.reset(); updateSummary();
+        setTimeout(() => location.reload(), 1500);
+      } else showAlert(data.message || 'Gagal menyimpan', 'danger');
+    } catch(err) { showAlert('Terjadi kesalahan sistem', 'danger'); }
+    document.getElementById('loadingPurchase').style.display = 'none';
+  });
+
+  document.querySelectorAll('.complete-btn, .cancel-btn').forEach(btn => {
+    btn.addEventListener('click', async function() {
+      const id = this.dataset.id;
+      const status = this.classList.contains('complete-btn') ? 'selesai' : 'batal';
+      try {
+        const res = await fetch(`/api/pembelian/${id}/status`, { method:'PUT', headers:{'Content-Type':'application/json'}, body: JSON.stringify({status}) });
+        if (res.ok) { showAlert(`Status diubah ke ${status}`, 'success'); setTimeout(() => location.reload(), 1000); }
+      } catch { showAlert('Gagal mengubah status', 'danger'); }
+    });
+  });
+});
+</script>
+{% endblock %}

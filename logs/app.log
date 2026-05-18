@@ -1,0 +1,744 @@
+[25-12-2024 01:26:42] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] Login system error: Access denied for user ''@'localhost' (using password: YES)
+[25-12-2024 01:27:42] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[25-12-2024 01:28:40] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[25-12-2024 01:32:17] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[25-12-2024 01:37:47] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[25-12-2024 01:38:20] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[25-12-2024 01:39:09] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[25-12-2024 01:40:34] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[25-12-2024 01:46:29] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[25-12-2024 01:48:07] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[03-01-2025 14:29:41] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[06-01-2025 10:00:17] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Mobile] [Browser: Chrome 131.0.0.0] [Platform: macOS 10.15.7] Login system error: 
+[12-01-2025 18:24:37] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-01-2025 18:25:29] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] admin DOWNLOADED USER data
+[12-01-2025 18:26:41] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-01-2025 18:27:43] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-01-2025 18:28:18] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-01-2025 18:28:59] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-01-2025 18:29:46] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User eric - Admin created by admin
+[12-01-2025 18:29:46] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User rudi - Admin created by admin
+[12-01-2025 18:29:46] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User hendri - Admin created by admin
+[12-01-2025 18:29:52] [ERROR] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] Error creating users from Excel: Duplicate entry 'eric' for key 'users.username'
+[12-01-2025 18:30:19] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-01-2025 18:33:26] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 131.0.0.0] [Platform: Windows 10] User baru dengan username test telah dibuat oleh admin
+[12-03-2025 21:04:33] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-03-2025 14:40:41] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Login system error: 
+[27-03-2025 14:41:57] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Login system error: 
+[27-03-2025 15:02:54] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Login system error: Access denied for user ''@'localhost' (using password: NO)
+[27-03-2025 15:06:10] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[28-03-2025 14:05:46] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[28-03-2025 20:49:39] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[28-03-2025 20:56:05] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[28-03-2025 20:56:49] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User user - User logged IN
+[28-03-2025 20:57:21] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[28-03-2025 20:57:42] [WARN] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Failed login attempt for email: malow.idnager@omnif
+[28-03-2025 20:58:29] [WARN] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Failed login attempt for email: malow.idnager@omnif
+[28-03-2025 20:58:37] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 17:27:18] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 17:29:50] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[29-03-2025 17:30:02] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 17:30:13] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[29-03-2025 18:45:04] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 18:45:07] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[29-03-2025 19:49:47] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 19:51:19] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] admin DOWNLOADED USER data
+[29-03-2025 20:12:26] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User baru dengan username user2 telah dibuat oleh admin
+[29-03-2025 20:19:42] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 20:22:06] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 20:23:17] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 20:25:13] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 20:33:06] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 20:39:43] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 20:46:26] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[29-03-2025 20:46:27] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 20:51:20] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[29-03-2025 20:51:23] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 21:16:01] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[29-03-2025 21:16:20] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User baru dengan username Reza telah dibuat oleh admin
+[29-03-2025 21:17:16] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[29-03-2025 21:17:37] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 21:55:37] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 21:55:56] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User dengan ID 5 telah diperbarui oleh Reza
+[29-03-2025 21:56:06] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User dengan ID 5 telah diperbarui oleh Reza
+[29-03-2025 22:08:26] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:09:07] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:16:23] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:16:48] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:19:11] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:24:44] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:28:27] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:28:54] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:33:13] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:39:58] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 134.0.0.0] [Platform: Android 6.0] User Reza - Admin logged IN
+[29-03-2025 22:44:15] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:51:43] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 22:52:00] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User dengan ID 4 telah diperbarui oleh Reza
+[29-03-2025 23:02:16] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:07:35] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:07:54] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:08:30] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:12:14] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:13:31] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:17:15] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:17:38] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:18:05] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:20:06] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:24:34] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:26:26] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:26:29] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User dengan username user3 telah dihapus oleh Reza
+[29-03-2025 23:30:39] [INFO] [User: Reza] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged IN
+[29-03-2025 23:30:46] [INFO] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User dengan username Reza telah dihapus oleh Reza
+[29-03-2025 23:31:00] [INFO] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User baru dengan username Reza telah dibuat oleh Reza
+[29-03-2025 23:31:22] [INFO] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User dengan username Reza telah dihapus oleh Reza
+[29-03-2025 23:36:14] [INFO] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Reza - Admin logged OUT
+[29-03-2025 23:36:18] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[30-03-2025 00:10:59] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User baru dengan username Thefool telah dibuat oleh admin
+[30-03-2025 00:11:18] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[30-03-2025 00:11:23] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:05:43] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:12:05] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:20:08] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:21:31] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:23:39] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:25:00] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:26:53] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:42:17] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:44:12] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:47:39] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:49:03] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:51:02] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:51:42] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 13:54:19] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 14:07:16] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 14:10:05] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 14:10:20] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 14:12:15] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 14:14:29] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 14:15:17] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 14:21:29] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 16:47:20] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Login system error: 
+[30-03-2025 16:47:39] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[30-03-2025 16:56:13] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Thefool DOWNLOADED USER data
+[30-03-2025 18:15:37] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 18:12:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 18:14:45] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 18:15:36] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 18:34:32] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 18:36:21] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 18:38:44] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:06:34] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:08:23] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:09:12] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:12:21] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:20:42] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:21:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:21:55] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:27:22] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:28:01] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:28:44] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:52:03] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:54:54] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:57:41] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 19:59:34] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 20:01:06] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 20:02:50] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User baru dengan username Reza telah dibuat oleh Thefool
+[01-04-2025 20:03:09] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User dengan ID 8 telah diperbarui oleh Thefool
+[01-04-2025 20:11:51] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 20:21:51] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[01-04-2025 20:22:03] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang dengan ID 12 (Lenovo LOQ) telah diperbarui oleh Thefool
+[01-04-2025 20:22:21] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang dengan nama Lenovo LOQ telah dihapus oleh Thefool
+[01-04-2025 20:22:46] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang baru dengan nama Lenovo LOQ telah ditambahkan oleh Thefool
+[01-04-2025 20:23:03] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Thefool DOWNLOADED STOK data
+[01-04-2025 21:19:53] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang dengan ID 13 (Lenovo LOQ) telah diperbarui oleh Thefool
+[02-04-2025 19:06:12] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[02-04-2025 19:21:08] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[02-04-2025 19:21:15] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Thefool DOWNLOADED USER data
+[02-04-2025 19:21:25] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Fahreza - Admin created by Thefool
+[02-04-2025 19:33:45] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[02-04-2025 19:45:24] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[02-04-2025 19:49:12] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[02-04-2025 19:56:05] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[02-04-2025 19:56:19] [ERROR] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Error saat mengupload barang dari Excel: now is not defined
+[02-04-2025 20:04:25] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[02-04-2025 20:04:39] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Thefool DOWNLOADED STOK data
+[02-04-2025 20:05:03] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang xiaomi 15 dengan SKU MI.INC ditambahkan oleh Thefool
+[02-04-2025 20:05:54] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang dengan ID 13 (Lenovo LOQ) telah diperbarui oleh Thefool
+[02-04-2025 20:06:03] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang dengan ID 14 (xiaomi 15) telah diperbarui oleh Thefool
+[02-04-2025 20:12:33] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[02-04-2025 20:13:06] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang Contoh Barang dengan SKU SKU001 ditambahkan oleh Thefool
+[02-04-2025 20:14:03] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang dengan nama Contoh Barang telah dihapus oleh Thefool
+[02-04-2025 20:14:50] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang Contoh Barang dengan SKU SKU001 ditambahkan oleh Thefool
+[02-04-2025 20:37:29] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang dengan ID 16 (Contoh Barang) telah diperbarui oleh Thefool
+[02-04-2025 20:37:43] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Barang dengan ID 16 (Contoh Barang) telah diperbarui oleh Thefool
+[03-04-2025 09:18:08] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[03-04-2025 20:56:48] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[03-04-2025 21:01:45] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[03-04-2025 21:05:12] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[03-04-2025 21:16:10] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[03-04-2025 21:28:55] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 20:07:09] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 20:33:56] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 20:36:18] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 21:38:54] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 21:43:11] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 21:51:00] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:05:55] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:09:34] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:11:38] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:12:31] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:16:09] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:22:48] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:24:21] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:25:13] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:26:30] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:33:15] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:34:17] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:34:48] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:55:11] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 22:56:38] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:03:00] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:03:18] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:04:49] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:05:37] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:10:59] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:12:44] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:17:42] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:19:55] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:22:04] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:22:55] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:27:07] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:28:19] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:29:55] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:34:48] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[04-04-2025 23:37:32] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[07-04-2025 19:38:52] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[07-04-2025 19:46:34] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[07-04-2025 19:53:07] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[07-04-2025 19:53:23] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Thefool DOWNLOADED CUSTOMER data
+[07-04-2025 20:10:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[07-04-2025 20:11:57] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[07-04-2025 20:12:36] [ERROR] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Error creating customers from Excel: nama is not defined
+[07-04-2025 20:13:31] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[07-04-2025 20:13:39] [ERROR] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Error creating customers from Excel: name is not defined
+[07-04-2025 20:17:09] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[07-04-2025 20:17:16] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Customer fahreza rizky created by Thefool
+[08-04-2025 08:22:41] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[08-04-2025 08:24:14] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 134.0.0.0] [Platform: Windows 10] Customer fahreza rizky created by Thefool
+[22-04-2025 18:51:29] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[22-04-2025 18:51:47] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[22-04-2025 19:04:17] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[22-04-2025 20:54:50] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[22-04-2025 20:56:52] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged OUT
+[22-04-2025 20:56:58] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged IN
+[22-04-2025 20:57:06] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[22-04-2025 20:57:15] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[22-04-2025 20:59:01] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged OUT
+[22-04-2025 20:59:04] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged IN
+[22-04-2025 20:59:15] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged IN
+[22-04-2025 21:01:58] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged IN
+[22-04-2025 21:02:12] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[22-04-2025 21:02:16] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[22-04-2025 21:02:28] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged OUT
+[22-04-2025 21:02:30] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged IN
+[22-04-2025 21:06:46] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged IN
+[22-04-2025 21:06:50] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[22-04-2025 21:06:53] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[22-04-2025 22:04:32] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[22-04-2025 22:31:47] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged OUT
+[22-04-2025 22:31:50] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged IN
+[22-04-2025 22:32:01] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[22-04-2025 22:32:04] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[22-04-2025 22:41:10] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[24-04-2025 08:40:02] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 135.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[06-06-2025 18:36:24] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Login system error: 
+[06-06-2025 18:37:12] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Login system error: 
+[06-06-2025 19:30:37] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[06-06-2025 19:37:16] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Thefool DOWNLOADED CUSTOMER data
+[06-06-2025 19:37:16] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Thefool DOWNLOADED CUSTOMER data
+[08-06-2025 18:12:57] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[08-06-2025 18:37:07] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[08-06-2025 18:42:23] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged OUT
+[08-06-2025 18:42:27] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[08-06-2025 18:42:39] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[08-06-2025 18:42:43] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[08-06-2025 18:45:07] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[08-06-2025 18:45:10] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[11-06-2025 20:56:38] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 20:57:31] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:01:58] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:03:56] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:04:34] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:09:40] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:10:50] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:17:32] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:36:23] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:37:02] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:50:16] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:52:45] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:54:05] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:54:46] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 21:59:49] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 22:00:56] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 22:02:30] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 22:03:44] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 22:24:55] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 22:27:38] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 22:29:16] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 22:37:04] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 22:39:39] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 22:40:48] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-06-2025 23:16:15] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-06-2025 00:10:06] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-06-2025 12:50:20] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-06-2025 12:59:27] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[12-06-2025 13:04:31] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-06-2025 13:05:41] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[12-06-2025 13:13:28] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[12-06-2025 13:15:10] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[12-06-2025 13:59:40] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[12-06-2025 14:02:24] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[12-06-2025 18:30:51] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-06-2025 19:59:02] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-06-2025 20:17:46] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-06-2025 20:23:20] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-06-2025 20:23:28] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[12-06-2025 20:24:24] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[12-06-2025 20:25:24] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[12-06-2025 20:27:15] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[12-06-2025 20:34:16] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[12-06-2025 20:34:41] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[12-06-2025 20:51:07] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[12-06-2025 21:31:10] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[12-06-2025 21:33:28] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 21:50:05] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 21:54:13] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 21:58:30] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:01:28] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:15:19] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:18:15] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:19:00] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:23:16] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:25:47] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:27:22] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:32:29] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:37:03] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:40:58] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:47:44] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:49:17] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:55:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 22:59:53] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 23:04:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 23:11:36] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 23:14:15] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 23:23:23] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 23:24:29] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[12-06-2025 23:25:03] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged OUT
+[12-06-2025 23:25:06] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[12-06-2025 23:25:29] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[12-06-2025 23:25:35] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 03:40:18] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 03:41:39] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 03:42:04] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 03:59:55] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:10:21] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:19:02] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:19:31] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:24:57] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:30:01] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:41:01] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:47:27] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[13-06-2025 04:48:57] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:50:01] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 04:50:25] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:50:32] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 04:50:42] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 04:52:36] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:52:42] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 04:53:01] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 04:53:31] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:05:18] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 05:05:50] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 05:13:33] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[13-06-2025 05:15:09] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:15:21] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:15:48] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:17:22] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:17:55] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 05:18:03] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:18:37] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 05:18:51] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:19:34] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 05:19:51] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:20:31] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[13-06-2025 05:20:44] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:21:32] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[13-06-2025 05:26:22] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 05:26:51] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[13-06-2025 05:26:58] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:27:04] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:27:43] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:28:49] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:37:18] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[13-06-2025 05:38:24] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[13-06-2025 05:39:46] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[13-06-2025 05:40:16] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[13-06-2025 05:40:46] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[13-06-2025 05:48:25] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:49:04] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 05:57:16] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[13-06-2025 05:59:51] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[13-06-2025 06:00:32] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 06:00:47] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[13-06-2025 06:06:32] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[13-06-2025 06:06:45] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[14-06-2025 13:07:58] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[14-06-2025 13:08:11] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[14-06-2025 14:08:35] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[18-06-2025 21:15:47] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[18-06-2025 21:23:44] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[19-06-2025 06:18:15] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 06:27:36] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[19-06-2025 06:39:51] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 06:41:07] [Sales report exported] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[19-06-2025 06:42:48] [Sales report exported] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[19-06-2025 07:46:22] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 07:59:46] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 08:01:38] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 08:03:38] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 08:07:36] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 08:18:12] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 08:19:34] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 08:26:35] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User Thefool - Admin logged IN
+[19-06-2025 08:31:10] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 08:37:26] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 08:42:36] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 09:03:02] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 09:11:24] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 09:17:58] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 09:21:59] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 10:02:49] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 10:11:18] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 10:28:49] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 10:29:00] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Thefool DOWNLOADED KATEGORI PRODUK data
+[19-06-2025 10:51:36] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 10:57:23] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 11:00:43] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 11:14:26] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User Thefool - Admin logged IN
+[19-06-2025 11:17:27] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[19-06-2025 19:14:00] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 19:20:20] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 19:50:21] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Thefool DOWNLOADED CUSTOMER data
+[19-06-2025 19:54:05] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 19:56:50] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 20:02:11] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 20:33:32] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[19-06-2025 20:48:51] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 03:38:14] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 03:50:07] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User Thefool - Admin logged IN
+[20-06-2025 03:55:09] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:02:22] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:07:15] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:12:23] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[20-06-2025 04:16:47] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:26:21] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:32:01] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:32:22] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:33:14] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:34:42] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:36:37] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:53:39] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 04:56:14] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:00:30] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:05:25] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:05:53] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:06:14] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:06:34] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:06:48] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:07:38] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:25:25] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:28:55] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:30:23] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:32:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:41:50] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:44:21] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:45:29] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 05:46:33] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[20-06-2025 05:51:14] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 05:53:18] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 05:56:12] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 06:00:24] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 06:04:34] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 06:05:05] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 06:50:42] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 06:52:13] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 06:52:59] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[20-06-2025 06:53:02] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:11:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:11:29] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:12:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:12:30] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:13:14] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:13:15] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:14:02] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:14:04] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:14:11] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:14:13] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:17:41] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:17:43] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:22:05] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:22:07] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:24:14] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:24:15] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:25:02] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:25:04] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:27:10] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:27:12] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:29:16] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:29:18] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:31:02] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:32:15] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User Thefool - Admin logged IN
+[20-06-2025 07:32:21] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:38:37] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User Thefool - Admin logged IN
+[20-06-2025 07:38:41] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:44:47] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:50:22] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User Thefool - Admin logged IN
+[20-06-2025 07:50:25] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:51:44] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User Thefool - Admin logged IN
+[20-06-2025 07:51:49] [Error getting products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:57:26] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User Thefool - Admin logged IN
+[20-06-2025 07:57:31] [Error getting products: Incorrect arguments to mysqld_stmt_execute] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:58:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User Thefool - Admin logged IN
+[20-06-2025 07:58:31] [Error getting products: Incorrect arguments to mysqld_stmt_execute] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:59:28] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 07:59:31] [Error getting products: Incorrect arguments to mysqld_stmt_execute] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 07:59:40] [Error getting products: Incorrect arguments to mysqld_stmt_execute] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 08:03:27] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 08:03:51] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged IN
+[20-06-2025 08:03:54] [Error getting products: Incorrect arguments to mysqld_stmt_execute] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 08:07:13] [Error getting products: Incorrect arguments to mysqld_stmt_execute] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 08:07:44] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[20-06-2025 08:16:26] [Error getting products: Incorrect arguments to mysqld_stmt_execute] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 08:18:49] [INFO] [User: Thefool] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Thefool - Admin logged OUT
+[20-06-2025 08:18:53] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 08:21:05] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 08:21:32] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 08:23:02] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 08:23:19] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 08:24:06] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[20-06-2025 08:24:09] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 08:24:21] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[20-06-2025 08:24:23] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 08:30:00] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 08:31:09] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 08:33:09] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 08:33:51] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[20-06-2025 08:33:54] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 08:35:54] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 08:37:00] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[20-06-2025 09:05:56] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 09:06:05] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:12:59] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 09:13:02] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:13:39] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:13:52] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:14:51] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[20-06-2025 09:14:59] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:23:50] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[20-06-2025 09:24:34] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[20-06-2025 09:24:39] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:29:14] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:35:05] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 09:35:07] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:35:30] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:35:34] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:35:42] [Error getting products: Failed to get products] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] ERROR
+[20-06-2025 09:47:51] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 09:49:24] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 09:50:17] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 09:51:04] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang baru dengan nama Lenovo IDEAPAD telah ditambahkan oleh admin
+[20-06-2025 10:00:35] [ERROR] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] admin gagal menghapus barang: Cannot delete or update a parent row: a foreign key constraint fails (`omniflow_db`.`stock_history`, CONSTRAINT `stock_history_ibfk_1` FOREIGN KEY (`barang_id`) REFERENCES `barangs` (`id`))
+[20-06-2025 10:00:41] [ERROR] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] admin gagal menghapus barang: Cannot delete or update a parent row: a foreign key constraint fails (`omniflow_db`.`stock_history`, CONSTRAINT `stock_history_ibfk_1` FOREIGN KEY (`barang_id`) REFERENCES `barangs` (`id`))
+[20-06-2025 11:05:25] [ERROR] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] admin gagal menghapus barang: Cannot delete or update a parent row: a foreign key constraint fails (`omniflow_db`.`stock_history`, CONSTRAINT `stock_history_ibfk_1` FOREIGN KEY (`barang_id`) REFERENCES `barangs` (`id`))
+[20-06-2025 18:30:12] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 18:36:50] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 18:37:18] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Laptop ASUS ROG' (ID: 1) diperbarui
+[20-06-2025 18:41:00] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 18:57:51] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 18:58:44] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Laptop ASUS ROG1' (ID: 1) diperbarui
+[20-06-2025 19:01:28] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Lenovo IDEAPAD' (ID: 38) diperbarui
+[20-06-2025 19:01:41] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Lenovo IDEAPAD' (ID: 38) diperbarui
+[20-06-2025 19:01:54] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Lenovo IDEAPAD' (ID: 38) diperbarui
+[20-06-2025 19:03:01] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Laptop ASUS ROG' (ID: 1) diperbarui
+[20-06-2025 19:03:22] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Laptop ASUS ROG' (ID: 1) diperbarui
+[20-06-2025 19:04:55] [ERROR] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Gagal menghapus barang: Cannot delete or update a parent row: a foreign key constraint fails (`omniflow_db`.`stock_history`, CONSTRAINT `stock_history_ibfk_1` FOREIGN KEY (`barang_id`) REFERENCES `barangs` (`id`))
+[20-06-2025 19:05:06] [ERROR] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Gagal menghapus barang: Cannot delete or update a parent row: a foreign key constraint fails (`omniflow_db`.`stock_history`, CONSTRAINT `stock_history_ibfk_1` FOREIGN KEY (`barang_id`) REFERENCES `barangs` (`id`))
+[20-06-2025 19:08:00] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] admin exported stock data (15 items)
+[20-06-2025 19:12:19] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 19:24:11] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 19:24:35] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Lenovo IDEAPAD' (ID: 38) diperbarui
+[20-06-2025 19:26:26] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 19:27:25] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 19:34:13] [ERROR] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Gagal menghapus barang: Cannot delete or update a parent row: a foreign key constraint fails (`omniflow_db`.`stock_history`, CONSTRAINT `stock_history_ibfk_1` FOREIGN KEY (`barang_id`) REFERENCES `barangs` (`id`))
+[20-06-2025 20:45:46] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 21:02:39] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 21:03:19] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[20-06-2025 21:07:34] [ERROR] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Gagal menghapus barang: Cannot delete or update a parent row: a foreign key constraint fails (`omniflow_db`.`stock_history`, CONSTRAINT `stock_history_ibfk_1` FOREIGN KEY (`barang_id`) REFERENCES `barangs` (`id`))
+[21-06-2025 13:52:08] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[21-06-2025 13:54:46] [ERROR] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Gagal menghapus barang: Cannot delete or update a parent row: a foreign key constraint fails (`omniflow_db`.`stock_history`, CONSTRAINT `stock_history_ibfk_1` FOREIGN KEY (`barang_id`) REFERENCES `barangs` (`id`))
+[27-06-2025 16:13:16] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 16:14:45] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User dengan ID 7 telah diperbarui oleh admin
+[27-06-2025 16:19:20] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 16:19:30] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User dengan ID 7 telah diperbarui oleh admin
+[27-06-2025 16:19:37] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User dengan username Rezaa telah dihapus oleh admin
+[27-06-2025 16:25:48] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 16:26:14] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User dengan ID 7 telah diperbarui oleh admin
+[27-06-2025 16:29:04] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 16:31:34] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 16:33:04] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Customer Angga Rizky created by admin
+[27-06-2025 16:34:39] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 16:37:17] [Sales report exported] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 16:40:28] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Customer Angga Rizky (Angga@25.com) deleted by admin
+[27-06-2025 16:45:07] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 16:50:25] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[27-06-2025 16:51:26] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[27-06-2025 16:52:46] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[27-06-2025 16:59:06] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[27-06-2025 16:59:56] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Customer Angga Rizky created by admin
+[27-06-2025 17:00:45] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Customer Angga Rizky (Angga@25.com) deleted by admin
+[27-06-2025 17:01:29] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Customer data downloaded by admin
+[27-06-2025 17:06:45] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[27-06-2025 17:07:14] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Customer Angga Rizky created by admin
+[27-06-2025 17:08:54] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 17:19:55] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 17:21:32] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 17:25:35] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 17:32:09] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User Rezaa (ID: 8) deleted by admin
+[27-06-2025 17:37:24] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 17:42:55] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 17:43:38] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 17:43:58] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User ID 7 (angga) updated to angga (User) by admin
+[27-06-2025 17:44:08] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User ID 7 (angga) updated to angga (Admin) by admin
+[27-06-2025 17:58:51] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Keyboard Mechanical Keychron K6' (ID: 3) diperbarui
+[27-06-2025 17:59:54] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Keyboard Mechanical Keychron K6' (ID: 3) diperbarui
+[27-06-2025 18:10:51] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[27-06-2025 18:10:52] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:11:19] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Headset Jabra Evolve2 75' (ID: 10) diperbarui
+[27-06-2025 18:12:16] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 18:13:06] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Headset Jabra Evolve2 75' (ID: 10) diperbarui
+[27-06-2025 18:15:42] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:16:29] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[27-06-2025 18:16:32] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged IN
+[27-06-2025 18:18:35] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[27-06-2025 18:18:40] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:19:28] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:19:55] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:20:17] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:27:02] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:29:05] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:30:03] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:31:47] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 18:33:27] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:44:18] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:45:00] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:46:04] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:52:55] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 18:59:04] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:07:35] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:08:16] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:09:22] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:09:40] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:12:11] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:16:14] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:17:00] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:18:03] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:18:44] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:19:38] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:22:16] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:30:28] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:32:30] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:40:27] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[27-06-2025 19:41:15] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:42:04] [Sales report exported] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 19:42:29] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:44:03] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:44:47] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:45:16] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:47:42] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 137.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[27-06-2025 19:48:24] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:48:57] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:50:06] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:51:02] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:51:07] [Sales report exported] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 19:51:49] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:53:53] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 19:54:29] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 19:57:38] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 20:00:04] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 20:06:56] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 20:08:23] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Supplier baru dengan nama Angga Rizky telah ditambahkan oleh admin
+[27-06-2025 21:06:11] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 21:11:41] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 21:13:27] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang baru 'Lenovo IDEAPAD' (SKU: LENOVO.INC) ditambahkan dengan stok 100
+[27-06-2025 21:14:03] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Lenovo IDEAPAD' (ID: 38) diperbarui
+[27-06-2025 21:22:03] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[27-06-2025 21:25:07] [Sales report exported] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 21:26:08] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User ID 8 (Rezaa) updated to angga (Admin) by admin
+[27-06-2025 21:39:16] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 21:42:44] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 21:43:30] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 21:48:57] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[27-06-2025 22:01:07] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Barang 'Laptop ASUS ROG' (ID: 1) diperbarui
+[27-06-2025 23:13:33] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Login system error: 
+[27-06-2025 23:14:17] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[04-07-2025 21:36:32] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[04-07-2025 21:36:55] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[04-07-2025 21:41:30] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 137.0.0.0] [Platform: Windows 10] Supplier baru dengan nama Fahreza Rizky Pradana telah ditambahkan oleh admin
+[19-09-2025 22:52:56] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 140.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[10-05-2026 19:43:44] [ERROR] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] Login system error: 
+[10-05-2026 19:44:09] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[10-05-2026 19:45:34] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[10-05-2026 19:48:46] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-05-2026 07:22:38] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-05-2026 07:22:52] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-05-2026 07:23:10] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 148.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[11-05-2026 07:24:20] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 148.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[11-05-2026 07:26:14] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 148.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[11-05-2026 07:27:34] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 148.0.0.0] [Platform: Android 6.0] User admin - Admin logged IN
+[11-05-2026 09:57:36] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-05-2026 09:59:48] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-05-2026 10:03:02] [INFO] [User: admin] [IP: 127.0.0.1] [Device: mobile] [Browser: Mobile Chrome 148.0.0.0] [Platform: Android 6.0] admin DOWNLOADED SUPPLIER data
+[11-05-2026 10:09:54] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[11-05-2026 10:14:49] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[18-05-2026 09:07:02] [WARN] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] Invalid password attempt for user: admin
+[18-05-2026 09:08:01] [WARN] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] Invalid password attempt for user: admin
+[18-05-2026 09:08:42] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[18-05-2026 09:09:23] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[18-05-2026 09:09:35] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[18-05-2026 09:12:10] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[18-05-2026 09:12:35] [Sales report exported] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[18-05-2026 09:13:11] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[18-05-2026 09:13:32] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User user - User logged IN
+[18-05-2026 09:14:25] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[18-05-2026 09:14:45] [WARN] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] Failed login attempt for email: malow.idnager@omnif
+[18-05-2026 09:15:14] [WARN] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] Invalid password attempt for user: manager
+[18-05-2026 09:15:18] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[18-05-2026 09:24:45] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[18-05-2026 09:29:45] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[18-05-2026 09:31:56] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[18-05-2026 09:33:06] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[18-05-2026 09:33:30] [WARN] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] Invalid password attempt for user: Fahreza
+[18-05-2026 09:33:37] [WARN] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] Invalid password attempt for user: Fahreza
+[18-05-2026 09:35:32] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[18-05-2026 09:37:41] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[18-05-2026 09:37:47] [WARN] [User: Unknown User] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] Failed login attempt for email: admin@omniflow.id
+[18-05-2026 09:38:02] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[18-05-2026 09:38:09] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged OUT
+[18-05-2026 09:38:21] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User user - User logged IN
+[18-05-2026 09:38:25] [INFO] [User: user] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User user - User logged OUT
+[18-05-2026 09:38:51] [INFO] [User: manager] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User manager - Manager logged IN
+[18-05-2026 09:43:53] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[18-05-2026 09:44:44] [INFO] [User: manager] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User manager - Manager logged OUT
+[18-05-2026 09:44:48] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
+[18-05-2026 09:45:02] [Transaction processed] [User: Unknown User] [IP: ] [Device: Unknown] [Browser: Unknown] [Platform: Unknown] INFO
+[18-05-2026 09:46:14] [INFO] [User: admin] [IP: 127.0.0.1] [Device: Desktop] [Browser: Chrome 148.0.0.0] [Platform: Windows 10] User admin - Admin logged IN
